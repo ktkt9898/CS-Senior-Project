@@ -1,0 +1,61 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Serve Jupyter Book",
+            "dependsOn": [
+                "Build Jupyter Book",
+                "Start HTTP Server"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build Jupyter Book",
+            "type": "shell",
+            "command": "jupyter-book build .",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Start HTTP Server",
+            "type": "shell",
+            "command": "python -m http.server --directory _build/html",
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": [
+                    {
+                        "regexp": ".",
+                        "file": 1,
+                        "location": 2,
+                        "message": 3
+                    }
+                ],
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^Serving HTTP",
+                    "endsPattern": "^Serving HTTP"
+                }
+            }
+        },
+        {
+            "label": "Open Browser",
+            "command": "${input:openBrowser}",
+            "dependsOn": [
+                "Start HTTP Server"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "openBrowser",
+            "type": "command",
+            "command": "simpleBrowser.show",
+            "args": [
+                "http://localhost:8000"
+            ]
+        }
+    ]
+}
