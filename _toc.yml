@@ -5,9 +5,9 @@ format: jb-book
 root: intro
 title: Project
 chapters:
-- file: Michigan-Analysis
-  sections:
-  - file: Michigan-Week-1
 - file: Georgia_Analysis
   sections:
-  - file: Georgia-Week-1
+  - file: Georgia_Week-1
+- file: Michigan_Analysis
+  sections:
+  - file: Michigan_Week-1
