@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Michigan Election Analysis &#8212; Project</title>
+    <title>Georgia Election Analysis &#8212; Project</title>
   
   
   
@@ -60,11 +60,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Michigan-Analysis';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Georgia_Analysis';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Michigan Election Prediction, Week 1" href="Michigan-Week-1.html" />
-    <link rel="prev" title="Project" href="intro.html" />
+    <link rel="next" title="Georgia Election Prediction, Week 1" href="Georgia-Week-1.html" />
+    <link rel="prev" title="Michigan Election Prediction, Week 1" href="Michigan-Week-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -169,13 +169,13 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Michigan Election Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Michigan-Analysis.html">Michigan Election Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Michigan-Week-1.html">Michigan Election Prediction, Week 1</a></li>
 
 
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Georgia_Analysis.html">Georgia Election Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Georgia Election Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Georgia-Week-1.html">Georgia Election Prediction, Week 1</a></li>
 
 
@@ -257,7 +257,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FMichigan-Analysis.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FGeorgia_Analysis.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +287,7 @@
       
       
       
-      <li><a href="_sources/Michigan-Analysis.ipynb" target="_blank"
+      <li><a href="_sources/Georgia_Analysis.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -363,7 +363,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Michigan Election Analysis</h1>
+    <h1>Georgia Election Analysis</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -374,7 +374,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">Import Libraries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-data-results-from-the-2024-michigan-senate-race-democrat-and-republican">Historical data results from the 2024 Michigan Senate Race, Democrat and Republican</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-data-results-from-the-2022-georgia-senate-race-democrat-and-republican">Historical data results from the 2022 Georgia Senate Race, Democrat and Republican</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-results-of-current-week-s-polls-by-candidate">Data Results of Current Week’s Polls, by Candidate</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-results-of-week-s-polls-by-political-party">Data Results of Week’s Polls, by Political Party</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consolidated-data-from-historical-results-and-projected-results">Consolidated data from historical results and projected results</a></li>
@@ -389,8 +389,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="michigan-election-analysis">
-<h1>Michigan Election Analysis<a class="headerlink" href="#michigan-election-analysis" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="georgia-election-analysis">
+<h1>Georgia Election Analysis<a class="headerlink" href="#georgia-election-analysis" title="Link to this heading">#</a></h1>
 <section id="import-libraries">
 <h2>Import Libraries<a class="headerlink" href="#import-libraries" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -406,17 +406,17 @@
 </div>
 </div>
 </section>
-<section id="historical-data-results-from-the-2024-michigan-senate-race-democrat-and-republican">
-<h2>Historical data results from the 2024 Michigan Senate Race, Democrat and Republican<a class="headerlink" href="#historical-data-results-from-the-2024-michigan-senate-race-democrat-and-republican" title="Link to this heading">#</a></h2>
+<section id="historical-data-results-from-the-2022-georgia-senate-race-democrat-and-republican">
+<h2>Historical data results from the 2022 Georgia Senate Race, Democrat and Republican<a class="headerlink" href="#historical-data-results-from-the-2022-georgia-senate-race-democrat-and-republican" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the following data for 2024 election results</span>
-<span class="n">dem_results</span> <span class="o">=</span> <span class="mi">2712686</span>
-<span class="n">rep_results</span> <span class="o">=</span> <span class="mi">2693680</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the following data for 2022 election results</span>
+<span class="n">dem_results</span> <span class="o">=</span> <span class="mi">1946117</span>
+<span class="n">rep_results</span> <span class="o">=</span> <span class="mi">1908442</span>
 <span class="n">dem_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">dem_results</span> <span class="o">/</span> <span class="p">(</span><span class="n">dem_results</span> <span class="o">+</span> <span class="n">rep_results</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
 <span class="n">rep_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">rep_results</span> <span class="o">/</span> <span class="p">(</span><span class="n">dem_results</span> <span class="o">+</span> <span class="n">rep_results</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
-<span class="n">data_2024</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s1">&#39;Answer&#39;</span><span class="p">:</span> <span class="s1">&#39;Slotkin&#39;</span><span class="p">,</span> <span class="s1">&#39;Political Party&#39;</span><span class="p">:</span> <span class="s1">&#39;DEM&#39;</span><span class="p">,</span> <span class="s1">&#39;Results&#39;</span><span class="p">:</span> <span class="n">dem_results</span><span class="p">,</span> <span class="s1">&#39;Percentage&#39;</span><span class="p">:</span> <span class="n">dem_percentage</span><span class="p">},</span>
-                          <span class="p">{</span><span class="s1">&#39;Answer&#39;</span><span class="p">:</span> <span class="s1">&#39;Rogers&#39;</span><span class="p">,</span> <span class="s1">&#39;Political Party&#39;</span><span class="p">:</span> <span class="s1">&#39;REP&#39;</span><span class="p">,</span> <span class="s1">&#39;Results&#39;</span><span class="p">:</span> <span class="n">rep_results</span><span class="p">,</span> <span class="s1">&#39;Percentage&#39;</span><span class="p">:</span> <span class="n">rep_percentage</span><span class="p">}])</span>
+<span class="n">data_2024</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s1">&#39;Answer&#39;</span><span class="p">:</span> <span class="s1">&#39;Warnock&#39;</span><span class="p">,</span> <span class="s1">&#39;Political Party&#39;</span><span class="p">:</span> <span class="s1">&#39;DEM&#39;</span><span class="p">,</span> <span class="s1">&#39;Results&#39;</span><span class="p">:</span> <span class="n">dem_results</span><span class="p">,</span> <span class="s1">&#39;Percentage&#39;</span><span class="p">:</span> <span class="n">dem_percentage</span><span class="p">},</span>
+                          <span class="p">{</span><span class="s1">&#39;Answer&#39;</span><span class="p">:</span> <span class="s1">&#39;Walker&#39;</span><span class="p">,</span> <span class="s1">&#39;Political Party&#39;</span><span class="p">:</span> <span class="s1">&#39;REP&#39;</span><span class="p">,</span> <span class="s1">&#39;Results&#39;</span><span class="p">:</span> <span class="n">rep_results</span><span class="p">,</span> <span class="s1">&#39;Percentage&#39;</span><span class="p">:</span> <span class="n">rep_percentage</span><span class="p">}])</span>
 
 <span class="c1"># Sort by sample size (largest first)</span>
 <span class="n">data_2024</span> <span class="o">=</span> <span class="n">data_2024</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Results&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -470,14 +470,14 @@
 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Candidate&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Total Votes&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;2024 Michigan Senate Election Results&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;2022 Georgia Senate Election Results&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 
 <span class="c1"># Format y-axis to show numbers with commas</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">FuncFormatter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s1">&#39;,&#39;</span><span class="p">)))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 
 <span class="c1"># Set y-axis limit to ensure bars are fully visible</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3500000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2500000</span><span class="p">)</span>
 
 <span class="c1"># Add legend</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">legend_elements</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Political Party&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
@@ -488,7 +488,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/901efee1f7e8f46ec8d2fab0a979e86e20c6015e076ce44723e7aa7118e66af5.png" src="_images/901efee1f7e8f46ec8d2fab0a979e86e20c6015e076ce44723e7aa7118e66af5.png" />
+<img alt="_images/034372832db6ee039e0924919694a33863934d9fa57f7a4b86903a44b5b0636a.png" src="_images/034372832db6ee039e0924919694a33863934d9fa57f7a4b86903a44b5b0636a.png" />
 </div>
 </div>
 </section>
@@ -506,8 +506,8 @@
     <span class="s1">&#39;answer&#39;</span><span class="p">:</span><span class="s1">&#39;Answer&#39;</span>
 <span class="p">})</span>
 
-<span class="c1"># Filter: Michigan AND (DEM or REP)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;State&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;MI&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Political Party&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;DEM&#39;</span><span class="p">,</span> <span class="s1">&#39;REP&#39;</span><span class="p">]))]</span>
+<span class="c1"># Filter: Georgia AND (DEM or REP)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;State&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;GA&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Political Party&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;DEM&#39;</span><span class="p">,</span> <span class="s1">&#39;REP&#39;</span><span class="p">]))]</span>
 
 <span class="c1"># Remove unwanted answers, data that is not useful for analysis</span>
 <span class="n">unwanted</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Don&#39;t know&quot;</span><span class="p">,</span> <span class="s2">&quot;Refused&quot;</span><span class="p">,</span> <span class="s2">&quot;No opinion&quot;</span><span class="p">]</span>
@@ -560,7 +560,7 @@
 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Candidate&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Total Sample Size&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Total Sample Size by Candidate in Michigan&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Total Sample Size by Candidate in Georgia&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;REP&#39;</span><span class="p">,</span> <span class="s1">&#39;DEM&#39;</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Political Party&#39;</span><span class="p">)</span>
@@ -570,7 +570,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/c3b08d50e3b95e048993116d8b88674f3d59615957a38773955da26783f52250.png" src="_images/c3b08d50e3b95e048993116d8b88674f3d59615957a38773955da26783f52250.png" />
+<img alt="_images/7196b085fa31bc53e4ec72c869b51a4293c7aa2096918788794567e78aceb53d.png" src="_images/7196b085fa31bc53e4ec72c869b51a4293c7aa2096918788794567e78aceb53d.png" />
 </div>
 </div>
 </section>
@@ -626,7 +626,7 @@
 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Political Party&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Total Sample Size&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Total Sample Size by Political Party for Michigan&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Total Sample Size by Political Party for Georgia&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">legend_elements</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Political Party&#39;</span><span class="p">)</span>
@@ -636,7 +636,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/42b7bad0d582086e6faf649b9e37d86b838489da0e75dc9dc0651941373ea738.png" src="_images/42b7bad0d582086e6faf649b9e37d86b838489da0e75dc9dc0651941373ea738.png" />
+<img alt="_images/f1a12ed1efff07a9bf267d825fec2007f367833a7949910e2db797f6fd4c8db7.png" src="_images/f1a12ed1efff07a9bf267d825fec2007f367833a7949910e2db797f6fd4c8db7.png" />
 </div>
 </div>
 </section>
@@ -701,7 +701,7 @@
 <span class="c1"># Labels and title</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Political Party&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Combined Percentage Chance (%)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Michigan Senate Race Prediction, Week 1&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Georgia Senate Race Prediction, Week 1&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 
 <span class="c1"># Remove x-ticks rotation if not needed</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -715,13 +715,13 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 
 <span class="c1"># Save the figure to a file</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;_static/images/michigan_graph.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;_static/images/georgia_graph.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/e796a5e8dab45eb996a9b61dccdef15bcd8c4213385183dc31c20c03ab4a0368.png" src="_images/e796a5e8dab45eb996a9b61dccdef15bcd8c4213385183dc31c20c03ab4a0368.png" />
+<img alt="_images/f64ad044175484c4b2bfb627fe25162fd6057cc97f1e7e687a0c27a992df477b.png" src="_images/f64ad044175484c4b2bfb627fe25162fd6057cc97f1e7e687a0c27a992df477b.png" />
 </div>
 </div>
 </section>
@@ -760,20 +760,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="Michigan-Week-1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Project</p>
+        <p class="prev-next-title">Michigan Election Prediction, Week 1</p>
       </div>
     </a>
     <a class="right-next"
-       href="Michigan-Week-1.html"
+       href="Georgia-Week-1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Michigan Election Prediction, Week 1</p>
+        <p class="prev-next-title">Georgia Election Prediction, Week 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -796,7 +796,7 @@
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">Import Libraries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-data-results-from-the-2024-michigan-senate-race-democrat-and-republican">Historical data results from the 2024 Michigan Senate Race, Democrat and Republican</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-data-results-from-the-2022-georgia-senate-race-democrat-and-republican">Historical data results from the 2022 Georgia Senate Race, Democrat and Republican</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-results-of-current-week-s-polls-by-candidate">Data Results of Current Week’s Polls, by Candidate</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-results-of-week-s-polls-by-political-party">Data Results of Week’s Polls, by Political Party</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consolidated-data-from-historical-results-and-projected-results">Consolidated data from historical results and projected results</a></li>

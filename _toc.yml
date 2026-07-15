@@ -8,3 +8,6 @@ chapters:
 - file: Michigan-Analysis
   sections:
   - file: Michigan-Week-1
+- file: Georgia_Analysis
+  sections:
+  - file: Georgia-Week-1
