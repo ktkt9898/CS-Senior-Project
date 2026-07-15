@@ -7,7 +7,10 @@ title: Project
 chapters:
 - file: Georgia_Analysis
   sections:
-  - file: Georgia_Week-1
+  - file: Georgia_Week_1
+- file: Maine_Analysis
+  sections:
+  - file: Maine_Week_1
 - file: Michigan_Analysis
   sections:
-  - file: Michigan_Week-1
+  - file: Michigan_Week_1
