@@ -356,7 +356,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -372,6 +374,16 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Setup</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-overview">Data Overview</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -381,7 +393,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="python-setup">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-setup">
 <h1>Python Setup<a class="headerlink" href="#python-setup" title="Link to this heading">#</a></h1>
 <ol class="arabic simple">
 <li><p>Install dependencies:
@@ -400,6 +412,14 @@ python -m http.server –directory _build/html</p></li>
 <li><p>Open the localhost server hyperlink or by typing into a web browser:
 <a class="reference external" href="http://localhost:8000">http://localhost:8000</a></p></li>
 </ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="data-overview">
+<h1>Data Overview<a class="headerlink" href="#data-overview" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>The senate.csv is compiled on a recurring basis, usually daily, by the New York Times and consists of the most recent and accurate data provided by reputable pollsters such as YouGov, Quantus Insights, and the University of Massachussetts.
+The important columns in the document are the state, sample size, party, and answer. These values are used in the prediction analysis to compile data to generate the most likely results for each senate race.</p></li>
+<li><p>The baseline data is compiled from historical races to generate a basic starting position on how a senate race was previously won to better understand voter indication.</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
@@ -438,6 +458,25 @@ python -m http.server –directory _build/html</p></li>
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Setup</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-overview">Data Overview</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>

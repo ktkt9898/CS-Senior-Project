@@ -438,6 +438,11 @@
 <span class="n">data_2024</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_2024</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">data_2024</span> <span class="o">=</span> <span class="n">data_2024</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
+<span class="c1"># Reassign the &#39;NONE&#39; party to &#39;THIRD&#39; as &#39;Third Party&#39; for better clarity in the graph</span>
+<span class="n">alias_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;NONE&#39;</span><span class="p">:</span> <span class="s1">&#39;THIRD&#39;</span>
+<span class="p">}</span>
+
 <span class="c1"># Define colors for each party</span>
 <span class="n">party_colors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DEM&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;REP&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;NONE&#39;</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span><span class="p">}</span>
 
@@ -445,7 +450,7 @@
 <span class="n">legend_elements</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;DEM&#39;</span><span class="p">),</span>
     <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;REP&#39;</span><span class="p">),</span>
-    <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;NONE&#39;</span><span class="p">)</span>
+    <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">alias_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NONE&#39;</span><span class="p">,</span> <span class="s1">&#39;THIRD&#39;</span><span class="p">))</span>
 <span class="p">]</span>
 
 <span class="c1"># Create bar chart</span>
@@ -454,6 +459,7 @@
 <span class="c1"># Create bars with party colors</span>
 <span class="k">for</span> <span class="n">candidate</span> <span class="ow">in</span> <span class="n">data_2024</span><span class="p">[</span><span class="s1">&#39;Answer&#39;</span><span class="p">]:</span>
     <span class="c1"># Get the party for this candidate</span>
+    <span class="n">display_name</span> <span class="o">=</span> <span class="n">alias_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">candidate</span><span class="p">,</span> <span class="n">candidate</span><span class="p">)</span>
     <span class="n">party</span> <span class="o">=</span> <span class="n">data_2024</span><span class="p">[</span><span class="n">data_2024</span><span class="p">[</span><span class="s1">&#39;Answer&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">candidate</span><span class="p">][</span><span class="s1">&#39;Political Party&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">color</span> <span class="o">=</span> <span class="n">party_colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">party</span><span class="p">,</span> <span class="s1">&#39;gray&#39;</span><span class="p">)</span>
     
@@ -491,7 +497,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 
 <span class="c1"># Set y-axis limit to ensure bars are fully visible</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3500000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2800000</span><span class="p">)</span>
 
 <span class="c1"># Add legend</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">legend_elements</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Political Party&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
@@ -502,7 +508,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/87519196b847c723641e55a6302e78dcf493b0f38c316c43bc0a9cdce5ed1b50.png" src="_images/87519196b847c723641e55a6302e78dcf493b0f38c316c43bc0a9cdce5ed1b50.png" />
+<img alt="_images/502d7333334a23fe5a73ac237905539a3eaa80bc900ce0d5d4b506681f44d173.png" src="_images/502d7333334a23fe5a73ac237905539a3eaa80bc900ce0d5d4b506681f44d173.png" />
 </div>
 </div>
 </section>
@@ -541,15 +547,21 @@
 <span class="n">df_aggregated</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_aggregated</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">df_aggregated</span> <span class="o">=</span> <span class="n">df_aggregated</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 
+<span class="c1"># Reassign the &#39;NONE&#39; party to &#39;THIRD&#39; as &#39;Third Party&#39; for better clarity in the graph</span>
+<span class="n">alias_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;NONE&#39;</span><span class="p">:</span> <span class="s1">&#39;THIRD&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
 <span class="c1"># Define colors for each party</span>
 <span class="n">party_colors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DEM&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;REP&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;NONE&#39;</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span><span class="p">}</span>
 
 <span class="c1"># Define colors for each party in the graph&#39;s legend</span>
+<span class="c1"># Check if third party has any sample size in the aggregated data</span>
 <span class="k">if</span> <span class="s1">&#39;NONE&#39;</span> <span class="ow">in</span> <span class="n">df_aggregated</span><span class="p">[</span><span class="s1">&#39;Political Party&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
     <span class="n">legend_elements</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;DEM&#39;</span><span class="p">),</span>
         <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;REP&#39;</span><span class="p">),</span>
-        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;NONE&#39;</span><span class="p">)</span> 
+        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">alias_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NONE&#39;</span><span class="p">,</span> <span class="s1">&#39;THIRD&#39;</span><span class="p">))</span>
     <span class="p">]</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">legend_elements</span> <span class="o">=</span> <span class="p">[</span>
@@ -594,7 +606,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/c34e50d8bb8fc3e710e9f063863a5fb1ef2fb741850e897aeb7c1515f3fd7994.png" src="_images/c34e50d8bb8fc3e710e9f063863a5fb1ef2fb741850e897aeb7c1515f3fd7994.png" />
+<img alt="_images/996c0b30a4da22f2cc8b145e1ca4485b67f0c5fe80946c803be8ecf583636ac2.png" src="_images/996c0b30a4da22f2cc8b145e1ca4485b67f0c5fe80946c803be8ecf583636ac2.png" />
 </div>
 </div>
 </section>
@@ -625,6 +637,11 @@
 <span class="k">else</span><span class="p">:</span>
     <span class="n">party_totals</span> <span class="o">=</span> <span class="n">party_totals</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
+<span class="c1"># Reassign the &#39;NONE&#39; party to &#39;THIRD&#39; as &#39;Third Party&#39; for better clarity in the graph</span>
+<span class="n">alias_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;NONE&#39;</span><span class="p">:</span> <span class="s1">&#39;THIRD&#39;</span>
+<span class="p">}</span>
+
 <span class="c1"># Define colors for each party</span>
 <span class="n">party_colors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DEM&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;REP&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;NONE&#39;</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span><span class="p">}</span>
 
@@ -633,7 +650,7 @@
     <span class="n">legend_elements</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;DEM&#39;</span><span class="p">),</span>
         <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;REP&#39;</span><span class="p">),</span>
-        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;NONE&#39;</span><span class="p">)</span> 
+        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">alias_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NONE&#39;</span><span class="p">,</span> <span class="s1">&#39;THIRD&#39;</span><span class="p">))</span> 
     <span class="p">]</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">legend_elements</span> <span class="o">=</span> <span class="p">[</span>
@@ -677,7 +694,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/cd21972afb94704e673db5f5d734e0d715666699c800dbe7278d74e717e52077.png" src="_images/cd21972afb94704e673db5f5d734e0d715666699c800dbe7278d74e717e52077.png" />
+<img alt="_images/26491c8cdcdbeed67802df0f72f1e2af0b40296260b20438b8cd505d84bb4a3c.png" src="_images/26491c8cdcdbeed67802df0f72f1e2af0b40296260b20438b8cd505d84bb4a3c.png" />
 </div>
 </div>
 </section>
@@ -725,6 +742,11 @@
 <span class="c1"># Clean index</span>
 <span class="n">combined_df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">combined_df</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 
+<span class="c1"># Reassign the &#39;NONE&#39; party to &#39;THIRD&#39; as &#39;Third Party&#39; for better clarity in the graph</span>
+<span class="n">alias_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;NONE&#39;</span><span class="p">:</span> <span class="s1">&#39;THIRD&#39;</span>
+<span class="p">}</span>
+
 <span class="c1"># Define colors for each party</span>
 <span class="n">party_colors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DEM&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;REP&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;NONE&#39;</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span><span class="p">}</span>
 
@@ -733,7 +755,7 @@
     <span class="n">legend_elements</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;DEM&#39;</span><span class="p">),</span>
         <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;REP&#39;</span><span class="p">),</span>
-        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;NONE&#39;</span><span class="p">)</span>
+        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">alias_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NONE&#39;</span><span class="p">,</span> <span class="s1">&#39;THIRD&#39;</span><span class="p">))</span>
     <span class="p">]</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">legend_elements</span> <span class="o">=</span> <span class="p">[</span>
@@ -784,7 +806,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/ccc8a0e6a35fe488f53214c9320c6516c6881d012f15d483bb6fb6ddd0ad46da.png" src="_images/ccc8a0e6a35fe488f53214c9320c6516c6881d012f15d483bb6fb6ddd0ad46da.png" />
+<img alt="_images/0ca2ec3516985ef46bbec3690bddfe1403e6fa30661e459c8fe6be27c18e41dc.png" src="_images/0ca2ec3516985ef46bbec3690bddfe1403e6fa30661e459c8fe6be27c18e41dc.png" />
 </div>
 </div>
 </section>
