@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Project &#8212; Project</title>
+    <title>Maine Election Prediction, Week 2 &#8212; Project</title>
   
   
   
@@ -60,10 +60,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Maine_Week_2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Georgia Election Analysis" href="Georgia_Analysis.html" />
+    <link rel="next" title="Michigan Election Analysis" href="Michigan_Analysis.html" />
+    <link rel="prev" title="Maine Election Prediction, Week 1" href="Maine_Week_1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -115,8 +116,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -136,7 +135,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -163,13 +162,13 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Project
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="Georgia_Analysis.html">Georgia Election Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Georgia_Week_1.html">Georgia Election Prediction, Week 1</a></li>
 
@@ -179,11 +178,11 @@
 
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Maine_Analysis.html">Maine Election Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Maine_Analysis.html">Maine Election Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Maine_Week_1.html">Maine Election Prediction, Week 1</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="Maine_Week_2.html">Maine Election Prediction, Week 2</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Maine Election Prediction, Week 2</a></li>
 
 
 </ul>
@@ -273,7 +272,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FMaine_Week_2.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -303,7 +302,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Maine_Week_2.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -313,7 +312,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -379,7 +378,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Project</h1>
+    <h1>Maine Election Prediction, Week 2</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -389,9 +388,11 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#developed-by-kyle-truschel">Developed by Kyle Truschel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Maine Election Prediction, Week 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#maine-election-prediction-graph">Maine Election Prediction Graph</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#working-bibliography">Working Bibliography</a></li>
 </ul>
+
             </nav>
         </div>
     </div>
@@ -402,38 +403,22 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="project">
-<h1>Project<a class="headerlink" href="#project" title="Link to this heading">#</a></h1>
-<section id="developed-by-kyle-truschel">
-<h2>Developed by Kyle Truschel<a class="headerlink" href="#developed-by-kyle-truschel" title="Link to this heading">#</a></h2>
-</section>
-<section id="abstract">
-<h2>Abstract:<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h2>
-<p>The upcoming 2026 midterm elections in the United States is primed to be one of the most
-divisive and consequential elections, with many important swing states that will change the
-power balance of the United States. This project will attempt to predict the senate races for three
-key swing states of Michigan, Maine, and Georgia and will utilise many of the skills I have
-developed from the courses at AUP. The prediction results will be displayed as a website and
-published on a weekly basis for the current percentage and likelihood for the candidates of the
-three swing states mentioned. The project will conclude in November with the end of the actual
-midterm elections, and the results of the project will be concluded and attempt to process the
-correct predictions and what may have influenced the results. The three main methods of
-prediction will involve using previous election data, reputable polling data, and volatility
-algorithms and prediction algorithms to calculate predictions for candidates. The previous
-election data will be gathered from the 2022 American midterm election for the three swing
-states mentioned. This initial data will be used as a baseline for further data. The polling data
-will be gathered on a weekly basis from reputable US polling data research institutions. This data
-will be used to supplement the initial data. Lastly, the most consequential data gathered from
-volatility and controversy on candidates will be attempted to be used in volatility calculations to
-forecast the most accurate prediction of candidates for the midterm elections.</p>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="maine-election-prediction-week-2">
+<h1>Maine Election Prediction, Week 2<a class="headerlink" href="#maine-election-prediction-week-2" title="Link to this heading">#</a></h1>
+<div style="display: flex; justify-content: space-between;">
+    <img src="_static/images/Democrat.png" style="float: left; width: 45%;">
+    <img src="_static/images/Republican.png" style="float: right; width: 45%;">
+</div></section>
+<section class="tex2jax_ignore mathjax_ignore" id="maine-election-prediction-graph">
+<h1>Maine Election Prediction Graph<a class="headerlink" href="#maine-election-prediction-graph" title="Link to this heading">#</a></h1>
+<img src="_static/images/maine_graph_week_2.png" style="width: 100%;"></section>
+<section class="tex2jax_ignore mathjax_ignore" id="working-bibliography">
+<h1>Working Bibliography<a class="headerlink" href="#working-bibliography" title="Link to this heading">#</a></h1>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Georgia_Analysis.html">Georgia Election Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Maine_Analysis.html">Maine Election Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Michigan_Analysis.html">Michigan Election Analysis</a></li>
+    https://www.nytimes.com/interactive/2024/11/05/us/elections/results-maine-us-senate.html
+    https://www.nytimes.com/interactive/polls/maine-us-senate-election-polls-2026.html
+    https://www.nytimes.com/interactive/polls/congressional-vote-2026.html
 </ul>
-</div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -466,12 +451,21 @@ forecast the most accurate prediction of candidates for the midterm elections.</
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Maine_Week_1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Maine Election Prediction, Week 1</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="Georgia_Analysis.html"
+       href="Michigan_Analysis.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Georgia Election Analysis</p>
+        <p class="prev-next-title">Michigan Election Analysis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -493,9 +487,11 @@ forecast the most accurate prediction of candidates for the midterm elections.</
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#developed-by-kyle-truschel">Developed by Kyle Truschel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Maine Election Prediction, Week 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#maine-election-prediction-graph">Maine Election Prediction Graph</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#working-bibliography">Working Bibliography</a></li>
 </ul>
+
   </nav></div>
 
 </div></div>
