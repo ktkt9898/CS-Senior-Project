@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -432,13 +432,13 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the following data for 2024 election results</span>
 <span class="n">dem_results</span> <span class="o">=</span> <span class="mi">2712686</span>
 <span class="n">rep_results</span> <span class="o">=</span> <span class="mi">2693680</span>
-<span class="n">third_party_results</span> <span class="o">=</span> <span class="mi">56697</span>
+<span class="n">third_party_results</span> <span class="o">=</span> <span class="mi">170821</span>
 <span class="n">dem_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">dem_results</span> <span class="o">/</span> <span class="p">(</span><span class="n">dem_results</span> <span class="o">+</span> <span class="n">rep_results</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
 <span class="n">rep_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">rep_results</span> <span class="o">/</span> <span class="p">(</span><span class="n">dem_results</span> <span class="o">+</span> <span class="n">rep_results</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
 <span class="n">third_party_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">third_party_results</span> <span class="o">/</span> <span class="p">(</span><span class="n">dem_results</span> <span class="o">+</span> <span class="n">rep_results</span> <span class="o">+</span> <span class="n">third_party_results</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
 <span class="n">data_2024</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s1">&#39;Answer&#39;</span><span class="p">:</span> <span class="s1">&#39;Slotkin&#39;</span><span class="p">,</span> <span class="s1">&#39;Political Party&#39;</span><span class="p">:</span> <span class="s1">&#39;DEM&#39;</span><span class="p">,</span> <span class="s1">&#39;Results&#39;</span><span class="p">:</span> <span class="n">dem_results</span><span class="p">,</span> <span class="s1">&#39;Percentage&#39;</span><span class="p">:</span> <span class="n">dem_percentage</span><span class="p">},</span>
                           <span class="p">{</span><span class="s1">&#39;Answer&#39;</span><span class="p">:</span> <span class="s1">&#39;Rogers&#39;</span><span class="p">,</span> <span class="s1">&#39;Political Party&#39;</span><span class="p">:</span> <span class="s1">&#39;REP&#39;</span><span class="p">,</span> <span class="s1">&#39;Results&#39;</span><span class="p">:</span> <span class="n">rep_results</span><span class="p">,</span> <span class="s1">&#39;Percentage&#39;</span><span class="p">:</span> <span class="n">rep_percentage</span><span class="p">},</span>
-                          <span class="p">{</span><span class="s1">&#39;Answer&#39;</span><span class="p">:</span> <span class="s1">&#39;Solis-Mullen&#39;</span><span class="p">,</span> <span class="s1">&#39;Political Party&#39;</span><span class="p">:</span> <span class="s1">&#39;NONE&#39;</span><span class="p">,</span> <span class="s1">&#39;Results&#39;</span><span class="p">:</span> <span class="n">third_party_results</span><span class="p">,</span> <span class="s1">&#39;Percentage&#39;</span><span class="p">:</span> <span class="n">third_party_percentage</span><span class="p">}])</span>
+                          <span class="p">{</span><span class="s1">&#39;Answer&#39;</span><span class="p">:</span> <span class="s1">&#39;Third Party&#39;</span><span class="p">,</span> <span class="s1">&#39;Political Party&#39;</span><span class="p">:</span> <span class="s1">&#39;NONE&#39;</span><span class="p">,</span> <span class="s1">&#39;Results&#39;</span><span class="p">:</span> <span class="n">third_party_results</span><span class="p">,</span> <span class="s1">&#39;Percentage&#39;</span><span class="p">:</span> <span class="n">third_party_percentage</span><span class="p">}])</span>
 
 <span class="c1"># Sort by sample size (largest first)</span>
 <span class="n">data_2024</span> <span class="o">=</span> <span class="n">data_2024</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Results&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -517,7 +517,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/502d7333334a23fe5a73ac237905539a3eaa80bc900ce0d5d4b506681f44d173.png" src="_images/502d7333334a23fe5a73ac237905539a3eaa80bc900ce0d5d4b506681f44d173.png" />
+<img alt="_images/a46150520f2114d475515352afde1ccd654fdf97ef913322ef7c95ee2b8db321.png" src="_images/a46150520f2114d475515352afde1ccd654fdf97ef913322ef7c95ee2b8db321.png" />
 </div>
 </div>
 </section>
