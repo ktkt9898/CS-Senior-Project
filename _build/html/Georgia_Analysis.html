@@ -414,8 +414,8 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="n">csv_path</span> <span class="o">=</span> <span class="s2">&quot;senate.csv&quot;</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;senate.csv&quot;</span><span class="p">)</span>
+<span class="n">pedersen_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_pedersen_index.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -426,15 +426,15 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the following data for 2022 election results</span>
-<span class="n">dem_results</span> <span class="o">=</span> <span class="mi">1946117</span>
-<span class="n">rep_results</span> <span class="o">=</span> <span class="mi">1908442</span>
-<span class="n">third_party_results</span> <span class="o">=</span> <span class="mi">81365</span>
+<span class="n">dem_results</span> <span class="o">=</span> <span class="mi">1820633</span>
+<span class="n">rep_results</span> <span class="o">=</span> <span class="mi">1721244</span>
+<span class="n">third_party_results</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">dem_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">dem_results</span> <span class="o">/</span> <span class="p">(</span><span class="n">dem_results</span> <span class="o">+</span> <span class="n">rep_results</span> <span class="o">+</span> <span class="n">third_party_results</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
 <span class="n">rep_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">rep_results</span> <span class="o">/</span> <span class="p">(</span><span class="n">dem_results</span> <span class="o">+</span> <span class="n">rep_results</span> <span class="o">+</span> <span class="n">third_party_results</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
 <span class="n">third_party_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">third_party_results</span> <span class="o">/</span> <span class="p">(</span><span class="n">dem_results</span> <span class="o">+</span> <span class="n">rep_results</span> <span class="o">+</span> <span class="n">third_party_results</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
 <span class="n">data_2024</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s1">&#39;Answer&#39;</span><span class="p">:</span> <span class="s1">&#39;Warnock&#39;</span><span class="p">,</span> <span class="s1">&#39;Political Party&#39;</span><span class="p">:</span> <span class="s1">&#39;DEM&#39;</span><span class="p">,</span> <span class="s1">&#39;Results&#39;</span><span class="p">:</span> <span class="n">dem_results</span><span class="p">,</span> <span class="s1">&#39;Percentage&#39;</span><span class="p">:</span> <span class="n">dem_percentage</span><span class="p">},</span>
                           <span class="p">{</span><span class="s1">&#39;Answer&#39;</span><span class="p">:</span> <span class="s1">&#39;Walker&#39;</span><span class="p">,</span> <span class="s1">&#39;Political Party&#39;</span><span class="p">:</span> <span class="s1">&#39;REP&#39;</span><span class="p">,</span> <span class="s1">&#39;Results&#39;</span><span class="p">:</span> <span class="n">rep_results</span><span class="p">,</span> <span class="s1">&#39;Percentage&#39;</span><span class="p">:</span> <span class="n">rep_percentage</span><span class="p">},</span>
-                          <span class="p">{</span><span class="s1">&#39;Answer&#39;</span><span class="p">:</span> <span class="s1">&#39;Oliver&#39;</span><span class="p">,</span> <span class="s1">&#39;Political Party&#39;</span><span class="p">:</span> <span class="s1">&#39;NONE&#39;</span><span class="p">,</span> <span class="s1">&#39;Results&#39;</span><span class="p">:</span> <span class="n">third_party_results</span><span class="p">,</span> <span class="s1">&#39;Percentage&#39;</span><span class="p">:</span> <span class="n">third_party_percentage</span><span class="p">}])</span>
+                          <span class="p">{</span><span class="s1">&#39;Answer&#39;</span><span class="p">:</span> <span class="s1">&#39;Third Party&#39;</span><span class="p">,</span> <span class="s1">&#39;Political Party&#39;</span><span class="p">:</span> <span class="s1">&#39;NONE&#39;</span><span class="p">,</span> <span class="s1">&#39;Results&#39;</span><span class="p">:</span> <span class="n">third_party_results</span><span class="p">,</span> <span class="s1">&#39;Percentage&#39;</span><span class="p">:</span> <span class="n">third_party_percentage</span><span class="p">}])</span>
 
 <span class="c1"># Sort by sample size (largest first)</span>
 <span class="n">data_2024</span> <span class="o">=</span> <span class="n">data_2024</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Results&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -455,7 +455,6 @@
 <span class="n">legend_elements</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;DEM&#39;</span><span class="p">),</span>
     <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;REP&#39;</span><span class="p">),</span>
-    <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">alias_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NONE&#39;</span><span class="p">,</span> <span class="s1">&#39;THIRD&#39;</span><span class="p">))</span>
 <span class="p">]</span>
 
 <span class="c1"># Create bar chart</span>
@@ -463,16 +462,20 @@
 
 <span class="c1"># Create bars with party colors</span>
 <span class="k">for</span> <span class="n">candidate</span> <span class="ow">in</span> <span class="n">data_2024</span><span class="p">[</span><span class="s1">&#39;Answer&#39;</span><span class="p">]:</span>
-    <span class="c1"># Get the party for this candidate</span>
-    <span class="n">display_name</span> <span class="o">=</span> <span class="n">alias_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">candidate</span><span class="p">,</span> <span class="n">candidate</span><span class="p">)</span>
-    <span class="n">party</span> <span class="o">=</span> <span class="n">data_2024</span><span class="p">[</span><span class="n">data_2024</span><span class="p">[</span><span class="s1">&#39;Answer&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">candidate</span><span class="p">][</span><span class="s1">&#39;Political Party&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">color</span> <span class="o">=</span> <span class="n">party_colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">party</span><span class="p">,</span> <span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">candidate</span> <span class="o">!=</span> <span class="s1">&#39;Third Party&#39;</span><span class="p">:</span>
+        <span class="c1"># Get the party for this candidate</span>
+        <span class="n">display_name</span> <span class="o">=</span> <span class="n">alias_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">candidate</span><span class="p">,</span> <span class="n">candidate</span><span class="p">)</span>
+        <span class="n">party</span> <span class="o">=</span> <span class="n">data_2024</span><span class="p">[</span><span class="n">data_2024</span><span class="p">[</span><span class="s1">&#39;Answer&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">candidate</span><span class="p">][</span><span class="s1">&#39;Political Party&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">party_colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">party</span><span class="p">,</span> <span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+        
+        <span class="c1"># Get the results (votes)</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="n">data_2024</span><span class="p">[</span><span class="n">data_2024</span><span class="p">[</span><span class="s1">&#39;Answer&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">candidate</span><span class="p">][</span><span class="s1">&#39;Results&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        
+        <span class="c1"># Create the bar</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">display_name</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
     
-    <span class="c1"># Get the results (votes)</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">data_2024</span><span class="p">[</span><span class="n">data_2024</span><span class="p">[</span><span class="s1">&#39;Answer&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">candidate</span><span class="p">][</span><span class="s1">&#39;Results&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    
-    <span class="c1"># Create the bar</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">display_name</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">continue</span>
 
 <span class="c1"># Add value labels INSIDE the bars (candidate name, votes, percentage)</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">candidate</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">percentage</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">data_2024</span><span class="p">[</span><span class="s1">&#39;Answer&#39;</span><span class="p">],</span> 
@@ -481,8 +484,12 @@
     <span class="c1"># Format votes with commas</span>
     <span class="n">votes_formatted</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">results</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span>
     
-    <span class="c1"># Create the label text with candidate name, votes, and percentage</span>
-    <span class="n">label_text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">candidate</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">votes_formatted</span><span class="si">}</span><span class="se">\n</span><span class="s2">(</span><span class="si">{</span><span class="n">percentage</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%)&quot;</span>
+    <span class="c1"># Conditionally build the label text</span>
+    <span class="k">if</span> <span class="n">candidate</span> <span class="o">!=</span> <span class="s1">&#39;Third Party&#39;</span><span class="p">:</span>
+        <span class="c1"># Show candidate, votes, and percentage for others</span>
+        <span class="n">label_text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">candidate</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">votes_formatted</span><span class="si">}</span><span class="se">\n</span><span class="s2">(</span><span class="si">{</span><span class="n">percentage</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%)&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">continue</span>
     
     <span class="c1"># Place text inside the bar (centered, with some offset from bottom)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">results</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1"># Position at half the bar height</span>
@@ -502,7 +509,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 
 <span class="c1"># Set y-axis limit to ensure bars are fully visible</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2000000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2200000</span><span class="p">)</span>
 
 <span class="c1"># Add legend</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">legend_elements</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Political Party&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
@@ -513,7 +520,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/11e0b02b9106a3710fb8d3a45bf31f5005c14f03bf71808a6b5584d0f91b1af6.png" src="_images/11e0b02b9106a3710fb8d3a45bf31f5005c14f03bf71808a6b5584d0f91b1af6.png" />
+<img alt="_images/c82d6a2bde159c57ea4640cc4975742eca7363c33426f0f539bb7c5332fd400e.png" src="_images/c82d6a2bde159c57ea4640cc4975742eca7363c33426f0f539bb7c5332fd400e.png" />
 </div>
 </div>
 </section>
@@ -683,7 +690,7 @@
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">sample_size</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">sample_size</span><span class="p">)</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
     
 <span class="c1"># Set y-axis limit to ensure bars are fully visible</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80000</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Political Party&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Total Sample Size&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
@@ -700,7 +707,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/e5001e43512573c0d9fe6f99fe0ea85fdc5e9f1b7f4753150b52bf8ebc023e66.png" src="_images/e5001e43512573c0d9fe6f99fe0ea85fdc5e9f1b7f4753150b52bf8ebc023e66.png" />
+<img alt="_images/612ba59e0f2103217559f694e3fd35d28bebf31302db57146b71536cf486e21c.png" src="_images/612ba59e0f2103217559f694e3fd35d28bebf31302db57146b71536cf486e21c.png" />
 </div>
 </div>
 </section>
@@ -709,17 +716,22 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update Week **MANUALLY**</span>
-<span class="n">week</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">week</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># Retrieve the Pedersen Index value from the CSV file</span>
+<span class="n">pedersen_index_value</span> <span class="o">=</span> <span class="n">pedersen_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pedersen Index Value: </span><span class="si">{</span><span class="n">pedersen_index_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># Combine the total sample sizes for both parties to get the consolidated data</span>
-<span class="n">consolidated_data</span> <span class="o">=</span> <span class="n">dem_total</span> <span class="o">+</span> <span class="n">rep_total</span>
+<span class="n">consolidated_data</span> <span class="o">=</span> <span class="n">dem_total</span> <span class="o">+</span> <span class="n">rep_total</span> <span class="o">+</span> <span class="n">third_party_total</span>
 
 <span class="c1"># Calculate the percentage of the total sample size for each party</span>
 <span class="n">consolidated_sample_size_dem_decimal</span> <span class="o">=</span> <span class="p">(</span><span class="n">dem_total</span> <span class="o">/</span> <span class="n">consolidated_data</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
 <span class="n">consolidated_sample_size_rep_decimal</span> <span class="o">=</span> <span class="p">(</span><span class="n">rep_total</span> <span class="o">/</span> <span class="n">consolidated_data</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
-<span class="n">consolidated_sample_size_third_party_decimal</span> <span class="o">=</span> <span class="p">(</span><span class="n">third_party_total</span> <span class="o">/</span> <span class="n">consolidated_data</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="k">if</span> <span class="s1">&#39;NONE&#39;</span> <span class="ow">in</span> <span class="n">party_totals</span><span class="p">[</span><span class="s1">&#39;Political Party&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+    <span class="n">consolidated_sample_size_third_party_decimal</span> <span class="o">=</span> <span class="p">(</span><span class="n">third_party_total</span> <span class="o">/</span> <span class="n">consolidated_data</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
 
-<span class="c1"># Calculate the percentage from the 2022 election results for each party and compare </span>
+<span class="c1"># Calculate the percentage from the 2024 election results for each party and compare </span>
 <span class="c1"># it to the consolidated sample size percentages</span>
 <span class="k">if</span> <span class="s1">&#39;NONE&#39;</span> <span class="ow">in</span> <span class="n">party_totals</span><span class="p">[</span><span class="s1">&#39;Political Party&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
     <span class="n">dem_percentage_chance</span> <span class="o">=</span> <span class="p">(</span><span class="n">consolidated_sample_size_dem_decimal</span> <span class="o">+</span> <span class="n">dem_percentage</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
@@ -752,38 +764,57 @@
     <span class="s1">&#39;NONE&#39;</span><span class="p">:</span> <span class="s1">&#39;THIRD&#39;</span>
 <span class="p">}</span>
 
-<span class="c1"># Define colors for each party</span>
-<span class="n">party_colors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DEM&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;REP&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;NONE&#39;</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span><span class="p">}</span>
+<span class="c1"># Define colors for each party (lighter versions)</span>
+<span class="n">party_colors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DEM&#39;</span><span class="p">:</span> <span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="s1">&#39;REP&#39;</span><span class="p">:</span> <span class="s1">&#39;lightcoral&#39;</span><span class="p">,</span> <span class="s1">&#39;NONE&#39;</span><span class="p">:</span> <span class="s1">&#39;lightgreen&#39;</span><span class="p">}</span>
+<span class="n">party_edge_colors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DEM&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;REP&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;NONE&#39;</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span><span class="p">}</span>
 
 <span class="c1"># Legend elements</span>
 <span class="k">if</span> <span class="s1">&#39;NONE&#39;</span> <span class="ow">in</span> <span class="n">combined_df</span><span class="p">[</span><span class="s1">&#39;Political Party&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
     <span class="n">legend_elements</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;DEM&#39;</span><span class="p">),</span>
-        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;REP&#39;</span><span class="p">),</span>
-        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">alias_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NONE&#39;</span><span class="p">,</span> <span class="s1">&#39;THIRD&#39;</span><span class="p">))</span>
+        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;DEM&#39;</span><span class="p">),</span>
+        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;lightcoral&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;REP&#39;</span><span class="p">),</span>
+        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">alias_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NONE&#39;</span><span class="p">,</span> <span class="s1">&#39;THIRD&#39;</span><span class="p">))</span>
     <span class="p">]</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">legend_elements</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;DEM&#39;</span><span class="p">),</span>
-        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;REP&#39;</span><span class="p">),</span>
+        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;DEM&#39;</span><span class="p">),</span>
+        <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;lightcoral&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;REP&#39;</span><span class="p">),</span>
     <span class="p">]</span>
 
 <span class="c1"># Create the bar chart</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 
-<span class="c1"># Create bars with party colors</span>
-<span class="k">for</span> <span class="n">party</span> <span class="ow">in</span> <span class="n">combined_df</span><span class="p">[</span><span class="s1">&#39;Political Party&#39;</span><span class="p">]:</span>
-    <span class="n">color</span> <span class="o">=</span> <span class="n">party_colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">party</span><span class="p">,</span> <span class="s1">&#39;gray&#39;</span><span class="p">)</span>
-    <span class="n">percentage</span> <span class="o">=</span> <span class="n">combined_df</span><span class="p">[</span><span class="n">combined_df</span><span class="p">[</span><span class="s1">&#39;Political Party&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">party</span><span class="p">][</span><span class="s1">&#39;Combined Percentage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">alias_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">party</span><span class="p">,</span> <span class="n">party</span><span class="p">),</span> <span class="n">percentage</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+<span class="c1"># Get data</span>
+<span class="n">parties</span> <span class="o">=</span> <span class="n">combined_df</span><span class="p">[</span><span class="s1">&#39;Political Party&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">percentages</span> <span class="o">=</span> <span class="n">combined_df</span><span class="p">[</span><span class="s1">&#39;Combined Percentage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="c1"># Create bars with lighter colors and error bars</span>
+<span class="n">bars</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">party</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">parties</span><span class="p">):</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="n">party_colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">party</span><span class="p">,</span> <span class="s1">&#39;lightgray&#39;</span><span class="p">)</span>
+    <span class="n">edge_color</span> <span class="o">=</span> <span class="n">party_edge_colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">party</span><span class="p">,</span> <span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+    <span class="n">percentage</span> <span class="o">=</span> <span class="n">percentages</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    
+    <span class="c1"># Create bar with lighter fill and darker edge</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">percentage</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="n">edge_color</span><span class="p">,</span> 
+                  <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">pedersen_index_value</span><span class="p">,</span> 
+                  <span class="n">capsize</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">error_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;linewidth&#39;</span><span class="p">:</span> <span class="mf">2.5</span><span class="p">,</span> <span class="s1">&#39;ecolor&#39;</span><span class="p">:</span> <span class="n">edge_color</span><span class="p">,</span> <span class="s1">&#39;capsize&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">})</span>
+    <span class="n">bars</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
 
 <span class="c1"># Add value labels INSIDE the bars (showing the percentage)</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">party</span><span class="p">,</span> <span class="n">percentage</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">combined_df</span><span class="p">[</span><span class="s1">&#39;Political Party&#39;</span><span class="p">],</span> <span class="n">combined_df</span><span class="p">[</span><span class="s1">&#39;Combined Percentage&#39;</span><span class="p">])):</span>
-    <span class="c1"># Format the percentage with one decimal place</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">party</span><span class="p">,</span> <span class="n">percentage</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">parties</span><span class="p">,</span> <span class="n">percentages</span><span class="p">)):</span>
     <span class="n">label</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">percentage</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span>
-    <span class="c1"># Place the label in the middle of the bar</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">percentage</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> 
-             <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+             <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add range labels at the top of error bars</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">percentage</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">percentages</span><span class="p">):</span>
+    <span class="n">upper</span> <span class="o">=</span> <span class="n">percentage</span> <span class="o">+</span> <span class="n">pedersen_index_value</span>
+    <span class="n">lower</span> <span class="o">=</span> <span class="n">percentage</span> <span class="o">-</span> <span class="n">pedersen_index_value</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">upper</span> <span class="o">+</span> <span class="mf">1.5</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">upper</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> 
+             <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">lower</span> <span class="o">-</span> <span class="mf">1.5</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">lower</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> 
+             <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
 
 <span class="c1"># Set y-axis limits (0 to 100 since it&#39;s a percentage)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -793,8 +824,8 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Combined Percentage Chance (%)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Georgia Senate Race Prediction, Week </span><span class="si">{</span><span class="n">week</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 
-<span class="c1"># Remove x-ticks rotation if not needed</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># Set x-ticks to party names</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">parties</span><span class="p">)),</span> <span class="n">parties</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
 <span class="c1"># Add grid</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
@@ -802,16 +833,22 @@
 <span class="c1"># Add legend</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">legend_elements</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Political Party&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="c1"># Add annotation explaining error bars</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.98</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Error bars show ±</span><span class="si">{</span><span class="n">pedersen_index_value</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">% historical volatility</span><span class="se">\n</span><span class="s1">(Pedersen Index average, 2014-2024)&#39;</span><span class="p">,</span>
+         <span class="n">transform</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span>
+         <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">))</span>
 
-<span class="c1"># Save the figure to a file</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;_static/images/georgia_graph_week_</span><span class="si">{</span><span class="n">week</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/cfa0192388c25adb834b4e2d02b8eb35b75817a9b090619a08f67ef29083ab21.png" src="_images/cfa0192388c25adb834b4e2d02b8eb35b75817a9b090619a08f67ef29083ab21.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pedersen Index Value: 4.47
+</pre></div>
+</div>
+<img alt="_images/1b58790a1d71ce1de697950508ead3214ca2d7a7f5495a8413f6e7860c99f16a.png" src="_images/1b58790a1d71ce1de697950508ead3214ca2d7a7f5495a8413f6e7860c99f16a.png" />
 </div>
 </div>
 </section>
