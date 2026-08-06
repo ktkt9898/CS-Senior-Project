@@ -817,8 +817,9 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Combined Percentage Chance (%)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Maine Senate Race Prediction, Week </span><span class="si">{</span><span class="n">week</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 
-<span class="c1"># Set x-ticks to party names</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">parties</span><span class="p">)),</span> <span class="n">parties</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># Apply aliases to x-axis tick labels</span>
+<span class="n">x_labels</span> <span class="o">=</span> <span class="p">[</span><span class="n">alias_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">party</span><span class="p">,</span> <span class="n">party</span><span class="p">)</span> <span class="k">for</span> <span class="n">party</span> <span class="ow">in</span> <span class="n">parties</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">parties</span><span class="p">)),</span> <span class="n">x_labels</span><span class="p">)</span>
 
 <span class="c1"># Add grid</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
@@ -841,7 +842,7 @@
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pedersen Index Value: 49.37
 </pre></div>
 </div>
-<img alt="_images/ef96178bcc9ab223787304ac341344b09a18c5b89e486c47940672ee0ab04175.png" src="_images/ef96178bcc9ab223787304ac341344b09a18c5b89e486c47940672ee0ab04175.png" />
+<img alt="_images/f2562eb2377ad7aa2715281cf398568b9ac1e466f101a0415f2d391370edfc00.png" src="_images/f2562eb2377ad7aa2715281cf398568b9ac1e466f101a0415f2d391370edfc00.png" />
 </div>
 </div>
 </section>

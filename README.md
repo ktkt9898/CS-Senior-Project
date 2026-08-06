@@ -9,8 +9,7 @@ jupyter-book --version
 
 or similar
 
-3. Run Jupyter Book:
-jupyter-book clean .
+3. Compile Jupyter Book:
 jupyter-book build .
 
 4. Run the Jupyter Book Server:

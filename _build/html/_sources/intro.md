@@ -1,24 +1,22 @@
 # Project
 ## Developed by Kyle Truschel
 
-## Abstract:
-The upcoming 2026 midterm elections in the United States is primed to be one of the most
-divisive and consequential elections, with many important swing states that will change the
-power balance of the United States. This project will attempt to predict the senate races for three
-key swing states of Michigan, Maine, and Georgia and will utilise many of the skills I have
-developed from the courses at AUP. The prediction results will be displayed as a website and
-published on a weekly basis for the current percentage and likelihood for the candidates of the
-three swing states mentioned. The project will conclude in November with the end of the actual
-midterm elections, and the results of the project will be concluded and attempt to process the
-correct predictions and what may have influenced the results. The three main methods of
-prediction will involve using previous election data, reputable polling data, and volatility
-algorithms and prediction algorithms to calculate predictions for candidates. The previous
-election data will be gathered from the 2022 American midterm election for the three swing
-states mentioned. This initial data will be used as a baseline for further data. The polling data
-will be gathered on a weekly basis from reputable US polling data research institutions. This data
-will be used to supplement the initial data. Lastly, the most consequential data gathered from
-volatility and controversy on candidates will be attempted to be used in volatility calculations to
-forecast the most accurate prediction of candidates for the midterm elections.
+## Abstract
+The upcoming 2026 midterm elections in the United States is primed to be one of the most divisive and consequential elections, with many important swing states that will change the power balance of the United States. This project will attempt to predict the senate races for three key swing states of Michigan, Maine, and Georgia and will utilise many of the skills I have developed from the courses at AUP. The prediction results will be displayed as a website and published on a weekly basis for the current percentage and likelihood for the candidates of the three swing states mentioned. The project will conclude in November with the end of the actual midterm elections, and the results of the project will be concluded and attempt to process the correct predictions and what may have influenced the results. The three main methods of prediction will involve using previous election data, reputable polling data, and volatility index formulas to calculate predictions for candidates. The previous election data will be gathered from the 2024 American midterm elections for Michigan and Maine and the 2022 Georgia midterm election. This initial data will be used as a baseline for further data. The polling data will be gathered on a weekly basis from reputable US polling data research institutions. This data will be used to supplement the initial data. Lastly, a formula will be used to incorporate volatility by comparing voter swing patterns.
+
+## Background
+The US midterm elections present an opportunity for American citizens to cast their votes to decide who should be elected to the US Congres, in both the US House of Representatives and the US Senate in order to represent the ideals and demands of the people. With this responsibility, lawmakers are given the ability to hold and control power over the US Government and decide how to use it for who they represent. Given the current political climate in the United States, the 2026 midterm elections is likely to be a consequential event as it coincides with the divisiveness of the demands of the American people and the elected representatives who are becoming less favorable in the eyes of the American population. Political events such as the American war in Iran, the Israel war in Gaza, the Russian war in Ukraine, climbing inflation, healthcare, climate change, and the economy as a whole has much of the American people dissatisfied with their current representatives in the US Congress. The decision of the US midterms will conclude on November 3rd, and the results not known until days after as votes are recounted and confirmed to maintian integrity. Analysis of politics has often been a difficult endeavor due to the nature of predicting elections. Similar to predicting the stock market or weather, much of the data gathered from political events is forecasted and is under review to change as candidate controversy, voter turnout, and corruption within political parties. Fortunately, there are many reputable institutions who are tasked with overcoming this endeavor in the field of gathering data from polling to better understand how voters feel on candidates and policy proposals. With this idea in mind, this will be the entire purpose of this project to better understand how the 2026 midterm elections will conclude.
+
+## Methodology
+In the US, many states are known as "Blue", "Red", and "Swing States", where typically blue aligns with the Democrat party and Red aligns with the Republican party, and the swing states can result in either party or a third party. With this aforementioned concept in mind, the baseline gathering of data will take the previous election results from a state's last election to get a better understanding on how voters in a particular state will lean. For instance, the last election in Michigan was 2024 where Democrats gained a very slim majority of votes compared to Republican candidates. This indicates that the state falls under the "swing state" category and could have the potential to go in any either party. The baseline data will be presented on a bar chart graph that displays the percentage of votes from the Democrat, Republican, and third party candidates.
+
+The second prediction methodology will be taking the most concrete data, which is the current week's most recent voter sentiment in the form of polling data. Reputable polling institutions such as YouGov, Ipsos, Emerson College, and the University of Massachusetts are tasked to conduct surveys and research in order to gather sample sizes of voters on who they plan to vote for on November 3rd. This data will be the most accurate as it cofirms voters who will not cast a vote or who are not interested in voting are not conducted in the polling institution's survey. However, this also assumes that the voters who did conduct the survey will actually turnout to vote. Ultimately, this data will be the most accurate representation on how voter's behavior will influence the midterm elections. This data will be compiled into a separate bar chart graph to display each candidate's favorability, based on voter sample size. As the weeks continue towards November 3rd, candidates will gain or lose favorability due to primaries, in which only one Democrat or Republican will be represented on the ballot. This will culminate into a single candidate for the Democrat, Republican, and if gathered, a third party. Finally, this data will be combined with the previous baseline bar chart graph to better understand how sample sizes combined with historical data can be used to predict the midterm election.
+
+The last prediction methodology will be introducing a volatility index. As mentioned, political elections are difficult to forecast due to the assumption that voters will turnout to vote, as voting in America is not a required event nor a federal holiday to encourage voter turnout. The main volatility index will be the Pederson index, which compiles previous election results in order to assess how voters will swing, either for the Republican, Democrat, or third party. The Pedersen index is a useful tool in this prediction analysis due to its entire purpose being used to predict electoral volatility. In abstract, the formula for the Pedersen index is as follows.
+
+$$
+V = \frac{1}{2} \sum_{i=1}^{n} |p_{i,t} - p_{i,t+1}|
+$$
 
 ```{tableofcontents}
 ```
