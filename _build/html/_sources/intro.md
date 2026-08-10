@@ -33,6 +33,15 @@ The polling data serves as the main indicator for voter behavior during a senate
 
 An important consideration for US elections is that voters ultimately may still decide to choose any candidate they desire, even those who are no longer officially running, those who are not eligible to run, and those who are running simply as a joke. This data is ultimately gathered by pollsters but represents an infinitesimal minority that will not influence an election, but nonetheless is important to consider as this portion of the data is not accurate.
 
+## Programming Overview
+This project will use Python, HTML, CSS, and Jupyter Book to compile and display the results of the 2026 senate race.
+
+Jupyter Book provides an opportunity to demonstrate my ability to utilize a new concept with skills I developed in my Research and Writing in CS and Math course. In essence, it excels in the field of Data Science as it creates an organized and formatted webpage to display graphs and data results.
+
+Jupyter Book utilizes the Python library, pandas, to read and sort data from csv files that can be manipulated to display relevant and important information.
+
+I intentionally wanted to avoid using an AI algorithm to influence and compile the prediction results, as I believe it introduces a "black box" scenario in which I do not believe the data and methodologies used to produce any result can be verified. AI and Visual Studio Code plugins may be used in the creation of this project to fix common errors and overcome programming obstacles, but it will not be relied upon.
+
 ## Results
 The results of this project will conclude on November 3rd as will the 2026 senate race. Typically, the senate race will be confirmed a few days after the official end date due to vote tallying and final counting begins by election clerks, who are responsible for verifying the election results.
 
