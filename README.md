@@ -8,8 +8,6 @@ jupyter-book --version
 The terminal results should be:
 Jupyter Book      : 1.0.4.post1
 
-or similar
-
 3. Compile Jupyter Book:
 jupyter-book build .
 
