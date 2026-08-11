@@ -1,4 +1,4 @@
-# Project
+# Prediction of the 2026 American Midterm Elections using Data Science, Programming, and Statistics
 ## Developed by Kyle Truschel
 
 ## Abstract
@@ -47,12 +47,12 @@ The results of this project will conclude on November 3rd as will the 2026 senat
 
 In addition, this section will attempt to address any possible outliers and correct or incorrect predictions as outlined by the goals of this project. As stated, predicting elections is a difficult endeavor due to the nature of elections, similar to the stock market and weather. Ultimately, this project will provide a general idea of how voters behave especially due to the volatile political climate in the United States.
 
-## Working Bilbiography
-```{bibliography} references.bib
-:all:
-```
-
 ## Table of Contents
 
 ```{tableofcontents}
+```
+
+## Working Bilbiography
+```{bibliography} references.bib
+:all:
 ```
