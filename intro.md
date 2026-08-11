@@ -48,24 +48,11 @@ The results of this project will conclude on November 3rd as will the 2026 senat
 In addition, this section will attempt to address any possible outliers and correct or incorrect predictions as outlined by the goals of this project. As stated, predicting elections is a difficult endeavor due to the nature of elections, similar to the stock market and weather. Ultimately, this project will provide a general idea of how voters behave especially due to the volatile political climate in the United States.
 
 ## Working Bilbiography
+```{bibliography} references.bib
+:all:
+```
 
-<a href="https://doi.org/10.1109/tcss.2021.3063660"></a>
-<a href="https://doi.org/10.1017/s1049096524000933"></a>
-<a href="https://www.nytimes.com/interactive/polls/congressional-vote-2026.html"></a>
-<a href="https://sos.ga.gov/page/historical-elections-results"></a>
-<a href="https://ballotpedia.org/United_States_Senate_election_in_Georgia,_2022"></a>
-<a href="https://ballotpedia.org/United_States_Senate_election_in_Georgia,_2020_(Perdue_vs._Ossoff_runoff)"></a>
-<a href="https://ballotpedia.org/United_States_Senate_election_in_Georgia,_2016"></a>
-<a href="https://ballotpedia.org/United_States_Senate_elections_in_Georgia,_2014"></a>
-<a href="https://www.nytimes.com/interactive/polls/georgia-us-senate-election-polls-2026.html"></a>
-<a href="https://www.maine.gov/sos/elections-voting/election-results-data/previous-election-results"></a>
-<a href="https://ballotpedia.org/United_States_Senate_election_in_Maine,_2024"></a>
-<a href="https://ballotpedia.org/United_States_Senate_election_in_Maine,_2020"></a>
-<a href="https://ballotpedia.org/United_States_Senate_election_in_Maine,_2018"></a>
-<a href="https://ballotpedia.org/United_States_Senate_elections_in_Maine,_2014"></a>
-<a href="https://www.nytimes.com/interactive/polls/maine-us-senate-election-polls-2026.html"></a>
-<a href="https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-5-2024"></a>
-<a href="https://www.nytimes.com/interactive/polls/michigan-us-senate-election-polls-2026.html"></a>
+## Table of Contents
 
 ```{tableofcontents}
 ```
