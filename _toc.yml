@@ -9,11 +9,32 @@ chapters:
   sections:
   - file: Georgia_Week_1
   - file: Georgia_Week_2
+  - file: Georgia_Week_3
+  - file: Georgia_Week_4
+  - file: Georgia_Week_5
+  - file: Georgia_Week_6
+  - file: Georgia_Week_7
+  - file: Georgia_Week_8
+  - file: Georgia_Week_9
 - file: Maine_Analysis
   sections:
   - file: Maine_Week_1
   - file: Maine_Week_2
+  - file: Maine_Week_3
+  - file: Maine_Week_4
+  - file: Maine_Week_5
+  - file: Maine_Week_6
+  - file: Maine_Week_7
+  - file: Maine_Week_8
+  - file: Maine_Week_9
 - file: Michigan_Analysis
   sections:
   - file: Michigan_Week_1
   - file: Michigan_Week_2
+  - file: Michigan_Week_3
+  - file: Michigan_Week_4
+  - file: Michigan_Week_5
+  - file: Michigan_Week_6
+  - file: Michigan_Week_7
+  - file: Michigan_Week_8
+  - file: Michigan_Week_9
