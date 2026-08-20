@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -458,7 +458,7 @@
 </section>
 <section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h2>
-<p>The US midterm elections present an opportunity for American citizens to cast their votes to decide who should be elected to the US Congress, in both the US House of Representatives and the US Senate in order to represent the ideals and demands of the people. With this responsibility, lawmakers are given the ability to hold and control power over the US Government and decide how to use it for who they represent. Given the current political climate in the United States, the 2026 midterm elections is likely to be a consequential event as it coincides with the divisiveness of the demands of the American people and the elected representatives who are becoming less favorable in the eyes of the American population. Political events such as the American war in Iran, the Israel war in Gaza, the Russian war in Ukraine, climbing inflation, healthcare, climate change, and the economy as a whole has many of the American people dissatisfied with their current representatives in the US Congress. The decision of the US midterms will conclude on November 3rd, and the results not known until days after as votes are recounted and confirmed to maintain integrity. Analysis of politics has often been a difficult endeavor due to the nature of predicting elections. Similar to predicting the stock market or weather, much of the data gathered from political events is forecasted and is under review to change as candidate controversy, voter turnout, and corruption within political parties. Fortunately, there are many reputable institutions who are tasked with overcoming this endeavor in the field of gathering data from polling to better understand how voters feel about candidates and policy proposals. With this idea in mind, this will be the entire purpose of this project to better understand how the 2026 midterm elections will conclude.</p>
+<p>The US midterm elections present an opportunity for American citizens to cast their votes to decide who should be elected to the US Congress, in both the US House of Representatives and the US Senate in order to represent the ideals and demands of the people. With this responsibility, lawmakers are given the ability to hold and control power over the US Government and decide how to use it for who they represent. Given the current political climate in the United States, the 2026 midterm elections is likely to be a consequential event as it coincides with the divisiveness of the demands of the American people and the elected representatives who are becoming less favorable in the eyes of the American population. Political events such as the American war in Iran, the Israel war in Gaza, the Russian war in Ukraine, climbing inflation, healthcare, climate change, and the economy as a whole has many of the American people dissatisfied with their current representatives in the US Congress. The decision of the US midterms will conclude on November 3rd, and the results not known until days after as votes are recounted and confirmed to maintain integrity. Analysis of politics has often been a difficult endeavor due to the nature of predicting elections. Similar to predicting the stock market or weather, much of the data gathered from political events is forecasted and is under review to change as candidate controversy, voter turnout, and corruption within political parties influence the elections.. Fortunately, there are many reputable institutions who are tasked with overcoming this endeavor in the field of gathering data from polling to better understand how voters feel about candidates and policy proposals. With this idea in mind, this will be the entire purpose of this project to better understand how the 2026 midterm elections will conclude.</p>
 </section>
 <section id="methodology">
 <h2>Methodology<a class="headerlink" href="#methodology" title="Link to this heading">#</a></h2>
@@ -477,8 +477,9 @@ V = \frac{1}{2} \sum_{i=1}^{n} |p_{i,t} - p_{i,t-1}|
 <h2>Data Overview<a class="headerlink" href="#data-overview" title="Link to this heading">#</a></h2>
 <p>As mentioned in the Methodology section, the first two methods will utilize historical and polling data to be compiled into the final prediction graph, and present the most concrete source of analysis for this project.</p>
 <p>The historical data as mentioned is from the state’s most recent senate election, for instance the most recent senate election for Michigan was conducted in 2024, where Democrats won by a slim majority. The source of this data is provided by the official State of Michigan’s website, where the data has been archived by election officials. In essence, this data is concrete and cannot be modified, thus making it a legitimate source of information. This is true for each state’s election results, despite any claim of election fraud, as votes are tallied and counted multiple times even after the conclusion of a senate race.</p>
-<p>The polling data serves as the main indicator for voter behavior during a senate race. Pollsters are professionals who are tasked by reputable institutions such as YouGov, Reuters, CNN, Emerson College to conduct short form interviews and surveys on a state’s district to gather voter indication on which candidates they favor. As the weeks progress towards the end date of the senate race, candidates will be chosen based on certain criteria such as ranked-choice voting and primary elections. The first criteria involves elimination rounds until only one candidate is elected to represent a party. The second criteria is similar, but involves an election a few weeks before the actual general election in which only one candidate is elected to represent a party. This idea is important to consider as candidates who are favored may drop out, be mired in controversy, or lose their primary and ranked choice voting - all of which influence voter behavior.</p>
-<p>The third methodology will utilize a formula to attempt to adjust for volatility. This formula will utilize the pedersen index to compare previous elections to gather a sense of how historical senate races have played out for states. As mentioned, in the US many states are considered Blue, Red, and Swing States (or Purple states as a mix of blue and red) which can be considered strongholds of Democrat and Republican voters. The pedersen index aims to compile previous elections to gather a sense of how recent senate elections have changed over the years, and introduce a volatility index. This volatility index will be added to the final graph to demonstrate the possibility of an upper and lower limit of percentages that a political party has to win.</p>
+<p>The polling data serves as the main indicator for voter behavior during a senate race. Pollsters are professionals who are tasked by reputable institutions such as Pew Research Center, YouGov, FiveThirtyEight, and Emerson College to conduct short form interviews and surveys on a state’s district to gather voter indication on which candidates they favor. As the weeks progress towards the end date of the senate race, candidates will be chosen based on certain criteria such as ranked-choice voting and primary elections. The first criteria involves elimination rounds until only one candidate is elected to represent a party. The second criteria is similar, but involves an election a few weeks before the actual general election in which only one candidate is elected to represent a party. This idea is important to consider as candidates who are favored may drop out, be mired in controversy, or lose their primary and ranked choice voting - all of which influence voter behavior. This behavior will naturally adjust the sample sizes as voters change their minds on candidates.</p>
+<p>In addition to using historical data and polling data, a consideration will be used to account for the discrepancy of precision for the percentage amounts. The assumption with combining the percentages skews the precision for the amount of votes received. The historical results have a vote size in the millions compared to current poll size in the thousands or hundred thousands, thus presenting a situation where the data is skewed. According to FiveThirtyEight, the approach of weighting fundamentals compared to current polling should be considered as they state, ”Theoretically, each predictor gets a weight that is inversely proportional to its variance, and you’d end up with a combined median prediction that is closer to the polls (in this example, Trump+3.9) — since they have less uncertainty than the fundamentals (in this example, Biden+1) — and uncertainty that is less than either predictor’s uncertainty on its own. Specifically, in this example, the polls should have received about 74 percent of the weight for the final prediction, while the fundamentals should have received 26 percent.” (ABC News) Using this consideration, the polling data will receive a more favorable weighting compared to the historical data with a 70/30 split of the total percentage amount.</p>
+<p>The third methodology will utilize a formula to attempt to adjust for volatility. This formula will utilize the Pedersen index to compare previous elections to gather a sense of how historical senate races have played out for states. As mentioned, in the US many states are considered Blue, Red, and Swing States (or Purple states as a mix of blue and red) which can be considered strongholds of Democrat and Republican voters. The Pedersen index aims to compile previous elections to gather a sense of how recent senate elections have changed over the years, and introduce a volatility index. This volatility index will be added to the final graph to demonstrate the possibility of an upper and lower limit of percentages that a political party has to win.</p>
 <p>An important consideration for US elections is that voters ultimately may still decide to choose any candidate they desire, even those who are no longer officially running, those who are not eligible to run, and those who are running simply as a joke. This data is ultimately gathered by pollsters but represents an infinitesimal minority that will not influence an election, but nonetheless is important to consider as this portion of the data is not accurate.</p>
 </section>
 <section id="programming-overview">
@@ -486,6 +487,7 @@ V = \frac{1}{2} \sum_{i=1}^{n} |p_{i,t} - p_{i,t-1}|
 <p>This project will use Python, HTML, CSS, and Jupyter Book to compile and display the results of the 2026 senate race.</p>
 <p>Jupyter Book provides an opportunity to demonstrate my ability to utilize a new concept with skills I developed in my Research and Writing in CS and Math course. In essence, it excels in the field of Data Science as it creates an organized and formatted webpage to display graphs and data results.</p>
 <p>Jupyter Book utilizes the Python library, pandas, to read and sort data from .csv files that can be manipulated to display relevant and important information.</p>
+<p>The Python library, matplotlib, will be used to generate each week’s graph which is then saved in order to record the prediction analysis over the course of the senate race. This will be used for analysis of the final results to generate a conclusion of the project.</p>
 <p>I intentionally wanted to avoid using an AI algorithm to influence and compile the prediction results, as I believe it introduces a “black box” scenario in which I do not believe the data and methodologies used to produce any result can be verified. AI and Visual Studio Code plugins may be used in the creation of this project to fix common errors and overcome programming obstacles, but it will not be relied upon.</p>
 </section>
 <section id="results">
@@ -513,65 +515,69 @@ V = \frac{1}{2} \sum_{i=1}^{n} |p_{i,t} - p_{i,t-1}|
 </div>
 <div class="citation" id="id3" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Cam24<span class="fn-bracket">]</span></span>
-<p>Camatarri. Ps: political science &amp; politics. <em>Predicting Popular-vote Shares in US Presidential Elections: A Model-based Strategy Relying on Anes Data</em>, pages 1–10, Oct 2024. URL: <a class="reference external" href="https://doi.org/10.1017/s1049096524000933">https://doi.org/10.1017/s1049096524000933</a>.</p>
+<p><strong>missing journal in camatarri_rapid_2024</strong></p>
 </div>
-<div class="citation" id="id9" role="doc-biblioentry">
+<div class="citation" id="id4" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>New24<span class="fn-bracket">]</span></span>
+<p>ABC News. How 538 is adjusting our election model for harris versus trump. <em>Predicting Popular-vote Shares in US Presidential Elections: A Model-based Strategy Relying on Anes Data</em>, 2024. URL: <a class="reference external" href="https://abcnews.com/538/538-adjusting-election-model-harris-versus-trump/story?id=112563822">https://abcnews.com/538/538-adjusting-election-model-harris-versus-trump/story?id=112563822</a>.</p>
+</div>
+<div class="citation" id="id10" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Ballotpedia14a<span class="fn-bracket">]</span></span>
 <p>Ballotpedia. United states senate election in georgia. 2014. URL: <a class="reference external" href="https://ballotpedia.org/United_States_Senate_elections_in_Georgia,_2014">https://ballotpedia.org/United_States_Senate_elections_in_Georgia,_2014</a>.</p>
 </div>
-<div class="citation" id="id15" role="doc-biblioentry">
+<div class="citation" id="id16" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Ballotpedia14b<span class="fn-bracket">]</span></span>
 <p>Ballotpedia. United states senate election in maine. 2014. URL: <a class="reference external" href="https://ballotpedia.org/United_States_Senate_election_in_Maine,_2014">https://ballotpedia.org/United_States_Senate_election_in_Maine,_2014</a>.</p>
 </div>
-<div class="citation" id="id8" role="doc-biblioentry">
+<div class="citation" id="id9" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Ballotpedia16<span class="fn-bracket">]</span></span>
 <p>Ballotpedia. United states senate election in georgia. 2016. URL: <a class="reference external" href="https://ballotpedia.org/United_States_Senate_election_in_Georgia,_2016">https://ballotpedia.org/United_States_Senate_election_in_Georgia,_2016</a>.</p>
 </div>
-<div class="citation" id="id14" role="doc-biblioentry">
+<div class="citation" id="id15" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Ballotpedia18<span class="fn-bracket">]</span></span>
 <p>Ballotpedia. United states senate election in maine. 2018. URL: <a class="reference external" href="https://ballotpedia.org/United_States_Senate_election_in_Maine,_2018">https://ballotpedia.org/United_States_Senate_election_in_Maine,_2018</a>.</p>
 </div>
-<div class="citation" id="id7" role="doc-biblioentry">
+<div class="citation" id="id8" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Ballotpedia20a<span class="fn-bracket">]</span></span>
 <p>Ballotpedia. United states senate election in georgia. 2020. URL: <a class="reference external" href="https://ballotpedia.org/United_States_Senate_election_in_Georgia,_2020_(Perdue_vs._Ossoff_runoff)">https://ballotpedia.org/United_States_Senate_election_in_Georgia,_2020_(Perdue_vs._Ossoff_runoff)</a>.</p>
 </div>
-<div class="citation" id="id13" role="doc-biblioentry">
+<div class="citation" id="id14" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Ballotpedia20b<span class="fn-bracket">]</span></span>
 <p>Ballotpedia. United states senate election in maine. 2020. URL: <a class="reference external" href="https://ballotpedia.org/United_States_Senate_election_in_Maine,_2020">https://ballotpedia.org/United_States_Senate_election_in_Maine,_2020</a>.</p>
 </div>
-<div class="citation" id="id6" role="doc-biblioentry">
+<div class="citation" id="id7" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Ballotpedia22<span class="fn-bracket">]</span></span>
 <p>Ballotpedia. United states senate election in georgia. 2022. URL: <a class="reference external" href="https://ballotpedia.org/United_States_Senate_election_in_Georgia,_2022">https://ballotpedia.org/United_States_Senate_election_in_Georgia,_2022</a>.</p>
 </div>
-<div class="citation" id="id12" role="doc-biblioentry">
+<div class="citation" id="id13" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Ballotpedia24<span class="fn-bracket">]</span></span>
 <p>Ballotpedia. United states senate election in maine. 2024. URL: <a class="reference external" href="https://ballotpedia.org/United_States_Senate_election_in_Maine,_2024">https://ballotpedia.org/United_States_Senate_election_in_Maine,_2024</a>.</p>
 </div>
-<div class="citation" id="id5" role="doc-biblioentry">
+<div class="citation" id="id6" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>GeorgiaSoState26<span class="fn-bracket">]</span></span>
 <p>Georgia Secretary of State. Historical elections results. 2026. URL: <a class="reference external" href="https://sos.ga.gov/page/historical-elections-results">https://sos.ga.gov/page/historical-elections-results</a>.</p>
 </div>
-<div class="citation" id="id11" role="doc-biblioentry">
+<div class="citation" id="id12" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>MaineSoState24<span class="fn-bracket">]</span></span>
 <p>Maine Secretary of State. Maine election results 2024. 2024. URL: <a class="reference external" href="https://www.maine.gov/sos/elections-voting/election-results-data/previous-election-results">https://www.maine.gov/sos/elections-voting/election-results-data/previous-election-results</a>.</p>
 </div>
-<div class="citation" id="id17" role="doc-biblioentry">
+<div class="citation" id="id18" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>MichiganSoState24<span class="fn-bracket">]</span></span>
 <p>Michigan Secretary of State. Michigan voter information center. 2024. URL: <a class="reference external" href="https://mvic.sos.state.mi.us/votehistory/Index?type=C&amp;electionDate=11-5-2024">https://mvic.sos.state.mi.us/votehistory/Index?type=C&amp;electionDate=11-5-2024</a>.</p>
 </div>
-<div class="citation" id="id4" role="doc-biblioentry">
+<div class="citation" id="id5" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>TheNYTimes<span class="fn-bracket">]</span></span>
 <p>The New York Times. Latest 2026 congressional ballot polls. URL: <a class="reference external" href="https://www.nytimes.com/interactive/polls/congressional-vote-2026.html">https://www.nytimes.com/interactive/polls/congressional-vote-2026.html</a>.</p>
 </div>
-<div class="citation" id="id10" role="doc-biblioentry">
+<div class="citation" id="id11" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>TheNYTimes26a<span class="fn-bracket">]</span></span>
 <p>The New York Times. Georgia u.s. senate election 2026: latest polls. 2026. URL: <a class="reference external" href="https://www.nytimes.com/interactive/polls/georgia-us-senate-election-polls-2026.html">https://www.nytimes.com/interactive/polls/georgia-us-senate-election-polls-2026.html</a>.</p>
 </div>
-<div class="citation" id="id16" role="doc-biblioentry">
+<div class="citation" id="id17" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>TheNYTimes26b<span class="fn-bracket">]</span></span>
 <p>The New York Times. Maine u.s. senate election 2026: latest polls. 2026. URL: <a class="reference external" href="https://www.nytimes.com/interactive/polls/maine-us-senate-election-polls-2026.html">https://www.nytimes.com/interactive/polls/maine-us-senate-election-polls-2026.html</a>.</p>
 </div>
-<div class="citation" id="id18" role="doc-biblioentry">
+<div class="citation" id="id19" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>TheNYTimes26c<span class="fn-bracket">]</span></span>
 <p>The New York Times. Michigan u.s. senate election 2026: latest polls. 2026. URL: <a class="reference external" href="https://www.nytimes.com/interactive/polls/michigan-us-senate-election-polls-2026.html">https://www.nytimes.com/interactive/polls/michigan-us-senate-election-polls-2026.html</a>.</p>
 </div>
