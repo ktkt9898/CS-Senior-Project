@@ -1,0 +1,242 @@
+Traceback (most recent call last):
+  File "C:\Users\kylet\AppData\Roaming\Python\Python314\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\kylet\AppData\Roaming\Python\Python314\site-packages\nbclient\client.py", line 1323, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\kylet\AppData\Roaming\Python\Python314\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Program Files\Python314\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\kylet\AppData\Roaming\Python\Python314\site-packages\nbclient\client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "C:\Users\kylet\AppData\Roaming\Python\Python314\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\kylet\AppData\Roaming\Python\Python314\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Update Week **MANUALLY**
+while True:
+    try:
+        week = int(input("Enter the current week number (1-52): "))
+        if 1 <= week <= 52:
+            break
+        else:
+            print("Please enter a valid week number between 1 and 52.")
+    except ValueError:
+        print("Invalid input. Please enter a numeric value for the week.")
+
+# Retrieve the Pedersen Index value from the CSV file
+pedersen_index_value = pedersen_data.iloc[3, 5]
+
+# Combine the total sample sizes for both parties to get the consolidated data
+consolidated_data = dem_total + rep_total + third_party_total
+
+# Calculate the percentage of the total sample size for each party
+consolidated_sample_size_dem_percentage = (dem_total / consolidated_data) * 100
+consolidated_sample_size_rep_percentage = (rep_total / consolidated_data) * 100
+if "NONE" in party_totals["Political Party"].values:
+    consolidated_sample_size_third_party_percentage = (
+        third_party_total / consolidated_data
+    ) * 100
+
+# Calculate the percentage from the 2024 election results for each party and compare
+# it to the consolidated sample size percentages
+# Include a weighted average of the consolidated sample size percentages and the historical election results percentages
+dem_percentage_chance = (consolidated_sample_size_dem_percentage * 0.70) + (
+    historical_dem_percentage * 0.30
+)
+rep_percentage_chance = (consolidated_sample_size_rep_percentage * 0.70) + (
+    historical_rep_percentage * 0.30
+)
+third_party_percentage_chance = (
+    consolidated_sample_size_third_party_percentage * 0.70
+) + (historical_third_party_percentage * 0.30)
+
+# Create new DataFrame to hold the combined percentages for each party
+combined_df = pd.DataFrame(
+    {
+        "Political Party": ["DEM", "REP", "NONE"],
+        "Combined Percentage": [
+            dem_percentage_chance,
+            rep_percentage_chance,
+            third_party_percentage_chance,
+        ],
+    }
+)
+
+# Sort by percentage
+combined_df = combined_df.sort_values("Combined Percentage", ascending=False)
+
+# Clean index
+combined_df.index = range(1, len(combined_df) + 1)
+
+# Reassign the 'NONE' party to 'THIRD' as 'Third Party' for better clarity in the graph
+alias_map = {"NONE": "THIRD"}
+
+# Define colors for each party (lighter versions)
+party_colors = {"DEM": "lightblue", "REP": "lightcoral", "NONE": "lightgreen"}
+party_edge_colors = {"DEM": "blue", "REP": "red", "NONE": "green"}
+
+# Legend elements
+legend_elements = [
+    Patch(facecolor="lightblue", edgecolor="blue", label="DEM"),
+    Patch(facecolor="lightcoral", edgecolor="red", label="REP"),
+    Patch(
+        facecolor="lightgreen", edgecolor="green", label=alias_map.get("NONE", "THIRD")
+    ),
+]
+
+# Create the bar chart
+plt.figure(figsize=(12, 6))
+
+# Get data
+parties = combined_df["Political Party"].tolist()
+percentages = combined_df["Combined Percentage"].tolist()
+
+# Create bars with lighter colors and error bars
+bars = []
+for i, party in enumerate(parties):
+    color = party_colors.get(party, "lightgray")
+    edge_color = party_edge_colors.get(party, "gray")
+    percentage = percentages[i]
+
+    # Create bar with lighter fill and darker edge
+    bar = plt.bar(
+        i,
+        percentage,
+        color=color,
+        edgecolor=edge_color,
+        linewidth=2,
+        yerr=pedersen_index_value,
+        capsize=6,
+        error_kw={"linewidth": 2.5, "ecolor": edge_color, "capsize": 6},
+    )
+    bars.append(bar)
+
+# Add value labels INSIDE the bars (showing the percentage)
+for i, (party, percentage) in enumerate(zip(parties, percentages)):
+    label = f"{percentage:.1f}%"
+    if "NONE" in party:
+        plt.text(
+            i - 0.3,
+            percentage / 2,
+            label,
+            ha="center",
+            va="center",
+            fontsize=14,
+            fontweight="bold",
+            color="black",
+        )
+    else:
+        plt.text(
+            i,
+            percentage / 2,
+            label,
+            ha="center",
+            va="center",
+            fontsize=14,
+            fontweight="bold",
+            color="black",
+        )
+
+# Add range labels at the top of error bars
+for i, percentage in enumerate(percentages):
+    upper = percentage + pedersen_index_value
+    lower = percentage - pedersen_index_value
+    plt.text(
+        i,
+        upper + 1,
+        f"{upper:.1f}%",
+        ha="center",
+        va="bottom",
+        fontsize=9,
+        color="black",
+        alpha=0.7,
+    )
+    plt.text(
+        i,
+        lower - 1,
+        f"{lower:.1f}%",
+        ha="center",
+        va="top",
+        fontsize=9,
+        color="black",
+        alpha=0.7,
+    )
+
+# Set y-axis limits (0 to 100 since it's a percentage)
+plt.ylim(0, 100)
+
+# Labels and title
+plt.xlabel("Political Party", fontsize=12)
+plt.ylabel("Combined Percentage Chance (%)", fontsize=12)
+plt.title(f"Georgia Senate Race Prediction, Week {week}", fontsize=14)
+
+# Apply aliases to x-axis tick labels
+x_labels = [alias_map.get(party, party) for party in parties]
+plt.xticks(range(len(parties)), x_labels)
+
+# Add grid
+plt.grid(axis="y", alpha=0.3)
+
+# Add legend
+plt.legend(handles=legend_elements, title="Political Party", loc="upper right")
+
+# Add annotation explaining error bars
+plt.text(
+    0,
+    1.1,
+    f"Error bars show ±{pedersen_index_value:.2f}% historical volatility\n(Pedersen Index average, 2014-2024)",
+    transform=plt.gca().transAxes,
+    fontsize=10,
+    verticalalignment="top",
+    bbox=dict(boxstyle="round", facecolor="white", alpha=0.9, edgecolor="gray"),
+)
+
+plt.tight_layout()
+plt.savefig(
+    f"_static/images/georgia_graph_week_{week}.png", dpi=300, bbox_inches="tight"
+)
+plt.show()
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mStdinNotImplementedError[39m                  Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[5][39m[32m, line 9[39m
+[32m      5[39m         [38;5;28;01mif[39;00m [32m1[39m <= week <= [32m52[39m:
+[32m      6[39m             [38;5;28;01mbreak[39;00m
+[32m      7[39m         [38;5;28;01melse[39;00m:
+[32m      8[39m             print([33m"Please enter a valid week number between 1 and 52."[39m)
+[32m----> [39m[32m9[39m     [38;5;28;01mexcept[39;00m ValueError:
+[32m     10[39m         print([33m"Invalid input. Please enter a numeric value for the week."[39m)
+[32m     11[39m 
+[32m     12[39m [38;5;66;03m# Retrieve the Pedersen Index value from the CSV file[39;00m
+
+[36mFile [39m[32m~\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py:1402[39m, in [36mKernel.raw_input[39m[34m(self, prompt)[39m
+[32m   1400[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m._allow_stdin:
+[32m   1401[39m     msg = [33m"[39m[33mraw_input was called, but this frontend does not support input requests.[39m[33m"[39m
+[32m-> [39m[32m1402[39m     [38;5;28;01mraise[39;00m StdinNotImplementedError(msg)
+[32m   1403[39m [38;5;28;01mreturn[39;00m [38;5;28mself[39m._input_request(
+[32m   1404[39m     [38;5;28mstr[39m(prompt),
+[32m   1405[39m     [38;5;28mself[39m._get_shell_context_var([38;5;28mself[39m._shell_parent_ident),
+[32m   1406[39m     [38;5;28mself[39m.get_parent([33m"[39m[33mshell[39m[33m"[39m),
+[32m   1407[39m     password=[38;5;28;01mFalse[39;00m,
+[32m   1408[39m )
+
+[31mStdinNotImplementedError[39m: raw_input was called, but this frontend does not support input requests.
+
