@@ -16,6 +16,9 @@ chapters:
   - file: Georgia_Week_7
   - file: Georgia_Week_8
   - file: Georgia_Week_9
+- file: Georgia_Backtest_Analysis
+  sections:
+  - file: Georgia_Backtest_2022
 - file: Maine_Analysis
   sections:
   - file: Maine_Week_1
@@ -27,6 +30,7 @@ chapters:
   - file: Maine_Week_7
   - file: Maine_Week_8
   - file: Maine_Week_9
+- file: Maine_Backtest_Analysis
 - file: Michigan_Analysis
   sections:
   - file: Michigan_Week_1
@@ -38,3 +42,4 @@ chapters:
   - file: Michigan_Week_7
   - file: Michigan_Week_8
   - file: Michigan_Week_9
+- file: Michigan_Backtest_Analysis
