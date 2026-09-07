@@ -1,0 +1,9 @@
+﻿2020,,,,,,,,
+Data Entry,1,2,3,4,5,6,7,8
+Democratic,49,47.3,46,47,47.5,48,48.6,50.2
+Republican,44.3,43.8,42.7,43.2,42.4,42.2,43.4,42.6
+Third,6.7,8.9,11.3,9.8,10.1,9.8,8,7.2
+,Aug 31 - Sep 4,Sep 7 - Sep 11,Sep 14 - Sep 18,Sep 28 - Oct 2,Oct 5 - Oct 9,Oct 12 - Oct 16,Oct 19 - Oct 23,Oct 26 - Oct 30
+,,,,,,,,
+"""Notes: Aug 31 is the first polling data Monday of the week""",,,,,,,,
+"""Data is recorded at the end of each week, Sep 4 is the first polling dataFriday of the week""",,,,,,,,

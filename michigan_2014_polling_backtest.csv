@@ -1,0 +1,9 @@
+﻿2014,,,,,,,,,
+Data Entry,1,2,3,4,5,6,7,8,9
+Democratic,45.3,45.2,44.7,43.7,44.5,45.4,45.8,46.8,50
+Republican,41.5,40,39.3,49,37.5,36.9,36.8,35.8,37.8
+Third,13.2,14.8,16,7.3,18,17.7,17.4,17.4,12.2
+,Sep 1 - Sep 5,Sep 8 - Sep 12,Sep 15 - Sep 19,Sep 22 - Sep 26,Sep 29 - Oct 3,Oct 5 - Oct 10,Oct 13 - Oct 17,Oct 20 - Oct 24,Oct 27 - Oct 31
+,,,,,,,,,
+"""Notes: Sep 1 is the first polling data Monday of the week""",,,,,,,,,
+"""Data is recorded at the end of each week, Sep 5 is the first polling data Friday of the week""",,,,,,,,,
