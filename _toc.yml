@@ -18,10 +18,7 @@ chapters:
   - file: Georgia_Week_9
 - file: Georgia_Backtest_Analysis
   sections:
-  - file: Georgia_Backtest_2022
-  - file: Georgia_Backtest_2020
-  - file: Georgia_Backtest_2016
-  - file: Georgia_Backtest_2014
+  - file: Georgia_Backtest
 - file: Maine_Election_Analysis
   sections:
   - file: Maine_Week_1
@@ -35,10 +32,7 @@ chapters:
   - file: Maine_Week_9
 - file: Maine_Backtest_Analysis
   sections:
-  - file: Maine_Backtest_2024
-  - file: Maine_Backtest_2020
-  - file: Maine_Backtest_2018
-  - file: Maine_Backtest_2014
+  - file: Maine_Backtest
 - file: Michigan_Election_Analysis
   sections:
   - file: Michigan_Week_1
@@ -52,7 +46,4 @@ chapters:
   - file: Michigan_Week_9
 - file: Michigan_Backtest_Analysis
   sections:
-  - file: Michigan_Backtest_2024
-  - file: Michigan_Backtest_2020
-  - file: Michigan_Backtest_2018
-  - file: Michigan_Backtest_2014
+  - file: Michigan_Backtest
