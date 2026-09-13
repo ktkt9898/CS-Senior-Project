@@ -4,3 +4,11 @@ Democratic,48,54,49,46,45,44,47,47,46,48
 Republican,47,42,44,41,41,43,40,43,45,42
 Third,5,4,7,13,14,13,13,10,9,10
 ,Sep 10th,Sep 16th,Sep 18th,Sep 21st,Sep 25th,Oct 6th,Oct 15th,Oct 28th,Oct 29th,Nov 1st
+,,,,,,,,,,
+Dem Result,42.4,,,,,,,,,
+Rep Result,51,,,,,,,,,
+3rd Result,6.63,,,,,,,,,
+,,,,,,,,,,
+Dem Error Rate,-0.132075472,,,,,,,,,
+Rep Error Rate,0.176470588,,,,,,,,,
+3rd Error Rate,-0.508295626,,,,,,,,,

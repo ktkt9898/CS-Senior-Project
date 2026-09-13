@@ -5,4 +5,12 @@ Republican,33,23,28,35
 Third,43,53,54,50
 ,Aug 22nd,Sep 18th,Nov 1st,Nov 3rd
 ,,,,
-"Notes: Polling data starts only in June and was conducted on a monthly basis",,,,
+Notes: Polling data starts only in June and was conducted on a monthly basis,,,,
+,,,,
+Dem Result,10.8,,,
+Rep Result,34.4,,,
+3rd Result,54.83,,,
+,,,,
+Dem Error Rate,0.351851852,,,
+Rep Error Rate,-0.01744186,,,
+3rd Error Rate,0.088090461,,,

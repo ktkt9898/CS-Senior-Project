@@ -182,10 +182,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Georgia_Backtest_Analysis.html">Georgia Backtest Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="Georgia_Backtest_2022.html">Georgia Backtest Analysis, 2022 Polling Data vs 2022 Election Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Georgia_Backtest_2020.html">Georgia Backtest Analysis, 2020 Polling Data vs 2020 Election Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Georgia_Backtest_2016.html">Georgia Backtest Analysis, 2016 Polling Data vs 2016 Election Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Georgia_Backtest_2014.html">Georgia Backtest Analysis, 2014 Polling Data vs 2014 Election Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Georgia_Backtest.html">Georgia Backtest Analysis, 2022-2014 Polling Data vs 2022-2014 Election Results</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Maine_Election_Analysis.html">Maine Election Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -201,10 +198,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Maine_Backtest_Analysis.html">Maine Backtest Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="Maine_Backtest_2024.html">Maine Backtest Analysis, 2024 Polling Data vs 2024 Election Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Maine_Backtest_2020.html">Maine Backtest Analysis, 2020 Polling Data vs 2020 Election Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Maine_Backtest_2018.html">Maine Backtest Analysis, 2018 Polling Data vs 2018 Election Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Maine_Backtest_2014.html">Maine Backtest Analysis, 2014 Polling Data vs 2014 Election Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Maine_Backtest.html">Maine Backtest Analysis, 2024-2014 Polling Data vs 2024-2014 Election Results</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Michigan_Election_Analysis.html">Michigan Election Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -219,11 +213,8 @@
 <li class="toctree-l2"><a class="reference internal" href="Michigan_Week_9.html">Michigan Election Prediction, Week 9</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Michigan_Backtest_Analysis.html">Maine Backtest Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="Michigan_Backtest_2024.html">Michigan Backtest Analysis, 2024 Polling Data vs 2024 Election Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Michigan_Backtest_2020.html">Michigan Backtest Analysis, 2020 Polling Data vs 2020 Election Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Michigan_Backtest_2018.html">Michigan Backtest Analysis, 2018 Polling Data vs 2018 Election Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Michigan_Backtest_2014.html">Michigan Backtest Analysis, 2014 Polling Data vs 2014 Election Results</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Michigan_Backtest_Analysis.html">Michigan Backtest Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Michigan_Backtest.html">Michigan Backtest Analysis, 2024-2014 Polling Data vs 2024-2014 Election Results</a></li>
 </ul>
 </details></li>
 </ul>
@@ -422,7 +413,8 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-data-results-from-the-2022-georgia-senate-race-democrat-republican-and-third-party">Historical data results from the 2022 Georgia Senate Race: Democrat, Republican, and Third Party</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-results-of-current-week-s-polls-by-candidate">Data Results of Current Week’s Polls, by Candidate</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-results-of-week-s-polls-by-political-party">Data Results of Week’s Polls, by Political Party</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consolidated-data-from-historical-results-polling-data-and-volatility-index">Consolidated data from historical results, polling data, and volatility index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-median-error-rate-from-backtest-analysis">Calculating median error rate from backtest analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consolidated-data-from-historical-results-polling-data-backtest-analysis-and-volatility-index">Consolidated data from historical results, polling data, backtest analysis, and volatility index</a></li>
 </ul>
             </nav>
         </div>
@@ -444,9 +436,14 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">statistics</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;senate.csv&quot;</span><span class="p">)</span>
 <span class="n">pedersen_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_pedersen_index.csv&quot;</span><span class="p">)</span>
+<span class="n">backtest_data_2022</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_2022_polling_backtest.csv&quot;</span><span class="p">)</span>
+<span class="n">backtest_data_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_2020_polling_backtest.csv&quot;</span><span class="p">)</span>
+<span class="n">backtest_data_2016</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_2016_polling_backtest.csv&quot;</span><span class="p">)</span>
+<span class="n">backtest_data_2014</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_2014_polling_backtest.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -783,15 +780,77 @@
 </div>
 </div>
 </section>
-<section id="consolidated-data-from-historical-results-polling-data-and-volatility-index">
-<h2>Consolidated data from historical results, polling data, and volatility index<a class="headerlink" href="#consolidated-data-from-historical-results-polling-data-and-volatility-index" title="Link to this heading">#</a></h2>
+<section id="calculating-median-error-rate-from-backtest-analysis">
+<h2>Calculating median error rate from backtest analysis<a class="headerlink" href="#calculating-median-error-rate-from-backtest-analysis" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Backtest Analysis for 2022 with median error margin</span>
+<span class="n">democrat_data_2022</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">backtest_data_2022</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">republican_data_2022</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">backtest_data_2022</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="c1"># Third party data for 2022 is not applicable due to Georgia&#39;s run-off election</span>
+
+<span class="c1"># Backtest Analysis for 2020 with median error margin</span>
+<span class="n">democrat_data_2020</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">backtest_data_2020</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">republican_data_2020</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">backtest_data_2020</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="c1"># Third party data for 2020 is not applicable due to Georgia&#39;s run-off election</span>
+
+<span class="c1"># Backtest Analysis for 2016 with median error margin</span>
+<span class="n">democrat_data_2016</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">backtest_data_2016</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">republican_data_2016</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">backtest_data_2016</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">third_party_data_2016</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">backtest_data_2016</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># Backtest Analysis for 2014 with median error margin</span>
+<span class="n">democrat_data_2014</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">backtest_data_2014</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">republican_data_2014</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">backtest_data_2014</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">third_party_data_2014</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">backtest_data_2014</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="n">median_democrat_error_margin</span> <span class="o">=</span> <span class="n">statistics</span><span class="o">.</span><span class="n">median</span><span class="p">([</span>
+    <span class="n">democrat_data_2022</span><span class="p">,</span>
+    <span class="n">democrat_data_2020</span><span class="p">,</span>
+    <span class="n">democrat_data_2016</span><span class="p">,</span>
+    <span class="n">democrat_data_2014</span><span class="p">,</span>
+    <span class="p">])</span>
+
+<span class="n">median_republican_error_margin</span> <span class="o">=</span> <span class="n">statistics</span><span class="o">.</span><span class="n">median</span><span class="p">([</span>
+    <span class="n">republican_data_2022</span><span class="p">,</span>
+    <span class="n">republican_data_2020</span><span class="p">,</span>
+    <span class="n">republican_data_2016</span><span class="p">,</span>
+    <span class="n">republican_data_2014</span><span class="p">,</span>
+    <span class="p">])</span>
+
+<span class="n">median_third_party_error_margin</span> <span class="o">=</span> <span class="n">statistics</span><span class="o">.</span><span class="n">median</span><span class="p">([</span>
+    <span class="n">third_party_data_2016</span><span class="p">,</span>
+    <span class="n">third_party_data_2014</span><span class="p">,</span>
+    <span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Median Democrat Error Margin: </span><span class="si">{</span><span class="n">median_democrat_error_margin</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Median Republican Error Margin: </span><span class="si">{</span><span class="n">median_republican_error_margin</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Median Third Party Error Margin: </span><span class="si">{</span><span class="n">median_third_party_error_margin</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Median Democrat Error Margin: 0.12%
+Median Republican Error Margin: 0.00%
+Median Third Party Error Margin: -3.03%
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="consolidated-data-from-historical-results-polling-data-backtest-analysis-and-volatility-index">
+<h2>Consolidated data from historical results, polling data, backtest analysis, and volatility index<a class="headerlink" href="#consolidated-data-from-historical-results-polling-data-backtest-analysis-and-volatility-index" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update Week **MANUALLY**</span>
 <span class="n">week</span> <span class="o">=</span> <span class="mi">2</span>
 
-<span class="c1"># Retrieve the Pedersen Index value from the CSV file</span>
-<span class="n">pedersen_index_value</span> <span class="o">=</span> <span class="n">pedersen_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="c1"># Dictionary of median error margins</span>
+<span class="n">median_error_margins</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;DEM&quot;</span><span class="p">:</span> <span class="n">median_democrat_error_margin</span><span class="p">,</span>
+    <span class="s2">&quot;REP&quot;</span><span class="p">:</span> <span class="n">median_republican_error_margin</span><span class="p">,</span>
+    <span class="s2">&quot;NONE&quot;</span><span class="p">:</span> <span class="n">median_third_party_error_margin</span><span class="p">,</span>
+<span class="p">}</span>
 
 <span class="c1"># Combine the total sample sizes for both parties to get the consolidated data</span>
 <span class="n">consolidated_data</span> <span class="o">=</span> <span class="n">dem_total</span> <span class="o">+</span> <span class="n">rep_total</span> <span class="o">+</span> <span class="n">third_party_total</span>
@@ -799,10 +858,9 @@
 <span class="c1"># Calculate the percentage of the total sample size for each party</span>
 <span class="n">consolidated_sample_size_dem_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">dem_total</span> <span class="o">/</span> <span class="n">consolidated_data</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
 <span class="n">consolidated_sample_size_rep_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">rep_total</span> <span class="o">/</span> <span class="n">consolidated_data</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
-<span class="k">if</span> <span class="s2">&quot;NONE&quot;</span> <span class="ow">in</span> <span class="n">party_totals</span><span class="p">[</span><span class="s2">&quot;Political Party&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
-    <span class="n">consolidated_sample_size_third_party_percentage</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="n">third_party_total</span> <span class="o">/</span> <span class="n">consolidated_data</span>
-    <span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">consolidated_sample_size_third_party_percentage</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">third_party_total</span> <span class="o">/</span> <span class="n">consolidated_data</span>
+<span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
 
 <span class="c1"># Calculate the percentage from the 2024 election results for each party and compare</span>
 <span class="c1"># it to the consolidated sample size percentages</span>
@@ -852,7 +910,7 @@
 <span class="p">]</span>
 
 <span class="c1"># Create the bar chart</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 
 <span class="c1"># Get data</span>
 <span class="n">parties</span> <span class="o">=</span> <span class="n">combined_df</span><span class="p">[</span><span class="s2">&quot;Political Party&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -872,10 +930,12 @@
         <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
         <span class="n">edgecolor</span><span class="o">=</span><span class="n">edge_color</span><span class="p">,</span>
         <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-        <span class="n">yerr</span><span class="o">=</span><span class="n">pedersen_index_value</span><span class="p">,</span>
+        <span class="n">yerr</span><span class="o">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">median_error_margins</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">party</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span>
         <span class="n">capsize</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+        <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
         <span class="n">error_kw</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;linewidth&quot;</span><span class="p">:</span> <span class="mf">2.5</span><span class="p">,</span> <span class="s2">&quot;ecolor&quot;</span><span class="p">:</span> <span class="n">edge_color</span><span class="p">,</span> <span class="s2">&quot;capsize&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">},</span>
     <span class="p">)</span>
+
     <span class="n">bars</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
 
 <span class="c1"># Add value labels INSIDE the bars (showing the percentage)</span>
@@ -906,11 +966,12 @@
 
 <span class="c1"># Add range labels at the top of error bars</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">percentage</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">percentages</span><span class="p">):</span>
-    <span class="n">upper</span> <span class="o">=</span> <span class="n">percentage</span> <span class="o">+</span> <span class="n">pedersen_index_value</span>
-    <span class="n">lower</span> <span class="o">=</span> <span class="n">percentage</span> <span class="o">-</span> <span class="n">pedersen_index_value</span>
+    <span class="n">err</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">median_error_margins</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">parties</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">upper</span> <span class="o">=</span> <span class="n">percentage</span> <span class="o">+</span> <span class="n">err</span>
+    <span class="n">lower</span> <span class="o">=</span> <span class="n">percentage</span> <span class="o">-</span> <span class="n">err</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
         <span class="n">i</span><span class="p">,</span>
-        <span class="n">upper</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">upper</span> <span class="o">+</span> <span class="mf">1.5</span><span class="p">,</span>
         <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">upper</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">,</span>
         <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
         <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span>
@@ -920,7 +981,7 @@
     <span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
         <span class="n">i</span><span class="p">,</span>
-        <span class="n">lower</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">lower</span> <span class="o">-</span> <span class="mf">1.5</span><span class="p">,</span>
         <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lower</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">,</span>
         <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
         <span class="n">va</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">,</span>
@@ -951,7 +1012,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
     <span class="mi">0</span><span class="p">,</span>
     <span class="mf">1.1</span><span class="p">,</span>
-    <span class="sa">f</span><span class="s2">&quot;Error bars show ±</span><span class="si">{</span><span class="n">pedersen_index_value</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">% historical volatility</span><span class="se">\n</span><span class="s2">(Pedersen Index average, 2014-2024)&quot;</span><span class="p">,</span>
+    <span class="sa">f</span><span class="s2">&quot;Error bars show ± Median Polling Error</span><span class="se">\n</span><span class="s2">(Backtest Analysis, 2014-2024)&quot;</span><span class="p">,</span>
     <span class="n">transform</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span>
     <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
     <span class="n">verticalalignment</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">,</span>
@@ -967,7 +1028,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/1a36992a14476508f2999499e5cef02473f9e4a2d42c52d961968c86798c7cf1.png" src="_images/1a36992a14476508f2999499e5cef02473f9e4a2d42c52d961968c86798c7cf1.png" />
+<img alt="_images/b8f91c1c6b142584da1da461623b248c86af08cd43a8b652ee2bdefa9f2336a6.png" src="_images/b8f91c1c6b142584da1da461623b248c86af08cd43a8b652ee2bdefa9f2336a6.png" />
 </div>
 </div>
 </section>
@@ -1045,7 +1106,8 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-data-results-from-the-2022-georgia-senate-race-democrat-republican-and-third-party">Historical data results from the 2022 Georgia Senate Race: Democrat, Republican, and Third Party</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-results-of-current-week-s-polls-by-candidate">Data Results of Current Week’s Polls, by Candidate</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-results-of-week-s-polls-by-political-party">Data Results of Week’s Polls, by Political Party</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consolidated-data-from-historical-results-polling-data-and-volatility-index">Consolidated data from historical results, polling data, and volatility index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-median-error-rate-from-backtest-analysis">Calculating median error rate from backtest analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consolidated-data-from-historical-results-polling-data-backtest-analysis-and-volatility-index">Consolidated data from historical results, polling data, backtest analysis, and volatility index</a></li>
 </ul>
   </nav></div>
 

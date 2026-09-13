@@ -5,4 +5,12 @@ Republican,25,27,30,37
 Third,23,32,13,13
 ,Aug 8th,Oct 18th,Oct 19th,Oct 31st
 ,,,,
-"Notes: Polling data only starts in August with remaining entries in October",,,,
+Notes: Polling data only starts in August with remaining entries in October,,,,
+,,,,
+Dem Result,10.44,,,
+Rep Result,35.22,,,
+3rd Result,54.32,,,
+,,,,
+Dem Error Rate,-3.789272031,,,
+Rep Error Rate,-0.050539466,,,
+3rd Error Rate,0.760677467,,,
