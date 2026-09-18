@@ -821,6 +821,17 @@
     <span class="n">third_party_data_2018</span><span class="p">,</span>
     <span class="n">third_party_data_2014</span><span class="p">,</span>
     <span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Median Democrat Error Margin: </span><span class="si">{</span><span class="n">median_democrat_error_margin</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Median Republican Error Margin: </span><span class="si">{</span><span class="n">median_republican_error_margin</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Median Third Party Error Margin: </span><span class="si">{</span><span class="n">median_third_party_error_margin</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Median Democrat Error Margin: 0.30%
+Median Republican Error Margin: 3.84%
+Median Third Party Error Margin: -4.87%
 </pre></div>
 </div>
 </div>
@@ -868,9 +879,9 @@
     <span class="p">{</span>
         <span class="s2">&quot;Political Party&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;DEM&quot;</span><span class="p">,</span> <span class="s2">&quot;REP&quot;</span><span class="p">,</span> <span class="s2">&quot;NONE&quot;</span><span class="p">],</span>
         <span class="s2">&quot;Combined Percentage&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="n">dem_percentage_chance</span><span class="p">,</span>
-            <span class="n">rep_percentage_chance</span><span class="p">,</span>
-            <span class="n">third_party_percentage_chance</span><span class="p">,</span>
+            <span class="nb">round</span><span class="p">(</span><span class="n">dem_percentage_chance</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="nb">round</span><span class="p">(</span><span class="n">rep_percentage_chance</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="nb">round</span><span class="p">(</span><span class="n">third_party_percentage_chance</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
         <span class="p">],</span>
     <span class="p">}</span>
 <span class="p">)</span>
@@ -1020,7 +1031,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/726ab3abe646b2ef808b61f33ba6737d84258c9087586866b344b2f371299568.png" src="_images/726ab3abe646b2ef808b61f33ba6737d84258c9087586866b344b2f371299568.png" />
+<img alt="_images/36f21c845e1c38235ec5d827c488dcdba12b847a4afe334a54ad70b44a280bba.png" src="_images/36f21c845e1c38235ec5d827c488dcdba12b847a4afe334a54ad70b44a280bba.png" />
 </div>
 </div>
 </section>
