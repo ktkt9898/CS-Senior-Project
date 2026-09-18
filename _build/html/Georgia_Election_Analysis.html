@@ -437,6 +437,7 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">statistics</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy.strings</span><span class="w"> </span><span class="kn">import</span> <span class="n">upper</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;senate.csv&quot;</span><span class="p">)</span>
 <span class="n">pedersen_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_pedersen_index.csv&quot;</span><span class="p">)</span>
@@ -686,7 +687,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/dc513c0685d1b30143ca4bfa2e6c062539052f81110893dcab01d61acef8ff3d.png" src="_images/dc513c0685d1b30143ca4bfa2e6c062539052f81110893dcab01d61acef8ff3d.png" />
+<img alt="_images/b7dad5badb7a9365ff3ab0e95462c3ed2e45dfadbb808be9c20dd07c22cfc459.png" src="_images/b7dad5badb7a9365ff3ab0e95462c3ed2e45dfadbb808be9c20dd07c22cfc459.png" />
 </div>
 </div>
 </section>
@@ -776,7 +777,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/d4f76d6e7bb78d7a2c07c2a2eb0ab8b814a740548c217f55a92ef5d58b916af7.png" src="_images/d4f76d6e7bb78d7a2c07c2a2eb0ab8b814a740548c217f55a92ef5d58b916af7.png" />
+<img alt="_images/943c7c2404d70ac6d0b7efad1ecbf15b7287cc5be0d72b26f36d9893f3c172c8.png" src="_images/943c7c2404d70ac6d0b7efad1ecbf15b7287cc5be0d72b26f36d9893f3c172c8.png" />
 </div>
 </div>
 </section>
@@ -843,7 +844,7 @@ Median Third Party Error Margin: -3.03%
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update Week **MANUALLY**</span>
-<span class="n">week</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">week</span> <span class="o">=</span> <span class="mi">3</span>
 
 <span class="c1"># Dictionary of median error margins</span>
 <span class="n">median_error_margins</span> <span class="o">=</span> <span class="p">{</span>
@@ -967,28 +968,32 @@ Median Third Party Error Margin: -3.03%
 <span class="c1"># Add range labels at the top of error bars</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">percentage</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">percentages</span><span class="p">):</span>
     <span class="n">err</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">median_error_margins</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">parties</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">0</span><span class="p">))</span>
-    <span class="n">upper</span> <span class="o">=</span> <span class="n">percentage</span> <span class="o">+</span> <span class="n">err</span>
-    <span class="n">lower</span> <span class="o">=</span> <span class="n">percentage</span> <span class="o">-</span> <span class="n">err</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
-        <span class="n">i</span><span class="p">,</span>
-        <span class="n">upper</span> <span class="o">+</span> <span class="mf">1.5</span><span class="p">,</span>
-        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">upper</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">,</span>
-        <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
-        <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span>
-        <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>
-        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
-    <span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
-        <span class="n">i</span><span class="p">,</span>
-        <span class="n">lower</span> <span class="o">-</span> <span class="mf">1.5</span><span class="p">,</span>
-        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lower</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">,</span>
-        <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
-        <span class="n">va</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">,</span>
-        <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>
-        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
-    <span class="p">)</span>
+    <span class="n">upper</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">percentage</span> <span class="o">+</span> <span class="n">err</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">lower</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">percentage</span> <span class="o">-</span> <span class="n">err</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">upper</span> <span class="o">==</span> <span class="n">lower</span><span class="p">:</span>
+        <span class="k">continue</span>  <span class="c1"># Skip if there&#39;s no error margin</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+            <span class="n">i</span><span class="p">,</span>
+            <span class="n">upper</span> <span class="o">+</span> <span class="mf">1.5</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">upper</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">,</span>
+            <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+            <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span>
+            <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+            <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+            <span class="n">i</span><span class="p">,</span>
+            <span class="n">lower</span> <span class="o">-</span> <span class="mf">1.5</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lower</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">,</span>
+            <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+            <span class="n">va</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">,</span>
+            <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+            <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+        <span class="p">)</span>
 
 <span class="c1"># Set y-axis limits (0 to 100 since it&#39;s a percentage)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -1028,7 +1033,7 @@ Median Third Party Error Margin: -3.03%
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/b8f91c1c6b142584da1da461623b248c86af08cd43a8b652ee2bdefa9f2336a6.png" src="_images/b8f91c1c6b142584da1da461623b248c86af08cd43a8b652ee2bdefa9f2336a6.png" />
+<img alt="_images/53676dc0e3a970151567e606541ebe468720bdc0f837e4f181d7eb1f5d6bf3aa.png" src="_images/53676dc0e3a970151567e606541ebe468720bdc0f837e4f181d7eb1f5d6bf3aa.png" />
 </div>
 </div>
 </section>
