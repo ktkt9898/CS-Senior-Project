@@ -963,9 +963,6 @@ Median Third Party Error Margin: -0.21%
     <span class="n">err</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">median_error_margins</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">parties</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">upper</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">percentage</span> <span class="o">+</span> <span class="n">err</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
     <span class="n">lower</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">percentage</span> <span class="o">-</span> <span class="n">err</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    
-    <span class="nb">print</span><span class="p">(</span><span class="n">upper</span><span class="p">,</span> <span class="n">lower</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">percentage</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">upper</span> <span class="o">==</span> <span class="n">lower</span> <span class="ow">or</span> <span class="n">upper</span> <span class="o">==</span> <span class="n">percentage</span> <span class="ow">or</span> <span class="n">lower</span> <span class="o">==</span> <span class="n">percentage</span><span class="p">:</span>
         <span class="k">continue</span>  <span class="c1"># Skip if there&#39;s no error margin</span>
@@ -1029,14 +1026,6 @@ Median Third Party Error Margin: -0.21%
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>37.1 36.9
-37.0
-36.3 35.9
-36.1
-27.1 26.7
-26.9
-</pre></div>
-</div>
 <img alt="_images/f28df14e6a3bb01de13ea613d822092e18667064e20b8c24cddbdc5a4734a68a.png" src="_images/f28df14e6a3bb01de13ea613d822092e18667064e20b8c24cddbdc5a4734a68a.png" />
 </div>
 </div>
