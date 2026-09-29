@@ -49,7 +49,24 @@ The polling data serves as the main indicator for voter behavior during a senate
 
 In addition to using historical data and polling data, a consideration will be used to account for the discrepancy of precision for the percentage amounts. The assumption with combining the percentages skews the precision for the amount of votes received. The historical results have a vote size in the millions compared to current poll size in the thousands or hundred thousands, thus presenting a situation where the data is skewed. According to FiveThirtyEight, the approach of weighting fundamentals compared to current polling should be considered as they state, ”Theoretically, each predictor gets a weight that is inversely proportional to its variance, and you'd end up with a combined median prediction that is closer to the polls (in this example, Trump+3.9) — since they have less uncertainty than the fundamentals (in this example, Biden+1) — and uncertainty that is less than either predictor's uncertainty on its own. Specifically, in this example, the polls should have received about 74 percent of the weight for the final prediction, while the fundamentals should have received 26 percent.” (ABC News) Using this consideration, the polling data will receive a more favorable weighting compared to the historical data with a 70/30 split of the total percentage amount.
 
-The third methodology will utilize a median error rate and be displayed as an upper and lower bound based on the previous methodology percentages, from historical and polling data. This data is gathered from the last four election cycle’s polling versus actual results.
+The data used in the third methodology will utilize a median error rate and be displayed as an upper and lower bound based on the previous methodology percentages, from historical and polling data. This data is gathered from the last four election cycle’s polling versus actual results.
+
+The median error rate for each state is as follows:
+
+Georgia:
+* Median Democrat Error Margin: 0.12%
+* Median Republican Error Margin: 0.00%
+* Median Third Party Error Margin: -3.03%
+
+Maine:
+* Median Democrat Error Margin: -0.17%
+* Median Republican Error Margin: 0.07%
+* Median Third Party Error Margin: -0.21%
+
+Michigan:
+* Median Democrat Error Margin: 0.30%
+* Median Republican Error Margin: 3.84%
+* Median Third Party Error Margin: -4.87%
 
 An important consideration for US elections is that voters ultimately may still decide to choose any candidate they desire, even those who are no longer officially running, those who are not eligible to run, and those who are running simply as a joke. This data is ultimately gathered by pollsters but represents an infinitesimal small minority that will not influence an election, but nonetheless is important to consider as this portion of the data is not accurate.
 

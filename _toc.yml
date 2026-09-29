@@ -5,6 +5,7 @@ format: jb-book
 root: intro
 title: Project
 chapters:
+- file: Highlights
 - file: Georgia_Election_Analysis
   sections:
   - file: Georgia_Week_1

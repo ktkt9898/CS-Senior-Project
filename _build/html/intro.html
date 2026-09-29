@@ -65,7 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Georgia Election Analysis" href="Georgia_Election_Analysis.html" />
+    <link rel="next" title="Election Analysis Highlights" href="Highlights.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -172,6 +172,7 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Highlights.html">Election Analysis Highlights</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Georgia_Election_Analysis.html">Georgia Election Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Georgia_Week_1.html">Georgia Election Prediction, Week 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Georgia_Week_2.html">Georgia Election Prediction, Week 2</a></li>
@@ -476,7 +477,26 @@ x_{\frac{n+1}{2}}, &amp; \text{if } n \text{ is odd} \\[6pt]
 <p>The historical data as mentioned is from the state’s most recent senate election, for instance the most recent senate election for Michigan was conducted in 2024, where Democrats won by a slim majority. The source of this data is provided by the official State of Michigan’s website, where the data has been archived by election officials. In essence, this data is concrete and cannot be modified, thus making it a legitimate source of information. This is true for each state’s election results, despite any claim of election fraud, as votes are tallied and counted multiple times even after the conclusion of a senate race.</p>
 <p>The polling data serves as the main indicator for voter behavior during a senate race. Pollsters are professionals who are tasked by reputable institutions such as Pew Research Center, YouGov, FiveThirtyEight, and Emerson College to conduct short form interviews and surveys on a state’s district to gather voter indication on which candidates they favor. As the weeks progress towards the end date of the senate race, candidates will be chosen based on certain criteria such as ranked-choice voting and primary elections. The first criteria involves elimination rounds until only one candidate is elected to represent a party. The second criteria is similar, but involves an election a few weeks before the actual general election in which only one candidate is elected to represent a party. This idea is important to consider as candidates who are favored may drop out, be mired in controversy, or lose their primary and ranked choice voting race - all of which influence voter behavior. This behavior will naturally adjust the sample sizes as voters change their minds on candidates.</p>
 <p>In addition to using historical data and polling data, a consideration will be used to account for the discrepancy of precision for the percentage amounts. The assumption with combining the percentages skews the precision for the amount of votes received. The historical results have a vote size in the millions compared to current poll size in the thousands or hundred thousands, thus presenting a situation where the data is skewed. According to FiveThirtyEight, the approach of weighting fundamentals compared to current polling should be considered as they state, ”Theoretically, each predictor gets a weight that is inversely proportional to its variance, and you’d end up with a combined median prediction that is closer to the polls (in this example, Trump+3.9) — since they have less uncertainty than the fundamentals (in this example, Biden+1) — and uncertainty that is less than either predictor’s uncertainty on its own. Specifically, in this example, the polls should have received about 74 percent of the weight for the final prediction, while the fundamentals should have received 26 percent.” (ABC News) Using this consideration, the polling data will receive a more favorable weighting compared to the historical data with a 70/30 split of the total percentage amount.</p>
-<p>The third methodology will utilize a median error rate and be displayed as an upper and lower bound based on the previous methodology percentages, from historical and polling data. This data is gathered from the last four election cycle’s polling versus actual results.</p>
+<p>The data used in the third methodology will utilize a median error rate and be displayed as an upper and lower bound based on the previous methodology percentages, from historical and polling data. This data is gathered from the last four election cycle’s polling versus actual results.</p>
+<p>The median error rate for each state is as follows:</p>
+<p>Georgia:</p>
+<ul class="simple">
+<li><p>Median Democrat Error Margin: 0.12%</p></li>
+<li><p>Median Republican Error Margin: 0.00%</p></li>
+<li><p>Median Third Party Error Margin: -3.03%</p></li>
+</ul>
+<p>Maine:</p>
+<ul class="simple">
+<li><p>Median Democrat Error Margin: -0.17%</p></li>
+<li><p>Median Republican Error Margin: 0.07%</p></li>
+<li><p>Median Third Party Error Margin: -0.21%</p></li>
+</ul>
+<p>Michigan:</p>
+<ul class="simple">
+<li><p>Median Democrat Error Margin: 0.30%</p></li>
+<li><p>Median Republican Error Margin: 3.84%</p></li>
+<li><p>Median Third Party Error Margin: -4.87%</p></li>
+</ul>
 <p>An important consideration for US elections is that voters ultimately may still decide to choose any candidate they desire, even those who are no longer officially running, those who are not eligible to run, and those who are running simply as a joke. This data is ultimately gathered by pollsters but represents an infinitesimal small minority that will not influence an election, but nonetheless is important to consider as this portion of the data is not accurate.</p>
 </section>
 <section id="programming-overview">
@@ -496,6 +516,7 @@ x_{\frac{n+1}{2}}, &amp; \text{if } n \text{ is odd} \\[6pt]
 <h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="Highlights.html">Election Analysis Highlights</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Georgia_Election_Analysis.html">Georgia Election Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Georgia_Backtest_Analysis.html">Georgia Backtest Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Maine_Election_Analysis.html">Maine Election Analysis</a></li>
@@ -677,11 +698,11 @@ x_{\frac{n+1}{2}}, &amp; \text{if } n \text{ is odd} \\[6pt]
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="Georgia_Election_Analysis.html"
+       href="Highlights.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Georgia Election Analysis</p>
+        <p class="prev-next-title">Election Analysis Highlights</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
