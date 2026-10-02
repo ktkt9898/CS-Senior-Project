@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -435,13 +435,12 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="kn">import</span> <span class="n">Patch</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">statistics</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">numpy.strings</span><span class="w"> </span><span class="kn">import</span> <span class="n">upper</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">csv</span><span class="w"> </span><span class="kn">import</span> <span class="n">writer</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;senate.csv&quot;</span><span class="p">)</span>
-<span class="n">pedersen_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_pedersen_index.csv&quot;</span><span class="p">)</span>
+<span class="n">results_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_results_index.csv&quot;</span><span class="p">)</span>
 <span class="n">backtest_data_2022</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_2022_polling_backtest.csv&quot;</span><span class="p">)</span>
 <span class="n">backtest_data_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_2020_polling_backtest.csv&quot;</span><span class="p">)</span>
 <span class="n">backtest_data_2016</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_2016_polling_backtest.csv&quot;</span><span class="p">)</span>
@@ -671,7 +670,7 @@
     <span class="p">)</span>
 
 <span class="c1"># Set y-axis limit to ensure bars are fully visible</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">75000</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Candidate&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Total Sample Size&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
@@ -688,7 +687,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/6787d7b609f0030ad7865111a286f93be443ed4b1f7fadf351b881fc17f49d32.png" src="_images/6787d7b609f0030ad7865111a286f93be443ed4b1f7fadf351b881fc17f49d32.png" />
+<img alt="_images/618bc47960840668437dcfff877160c50b0e932481268c994aa117a271ec70b3.png" src="_images/618bc47960840668437dcfff877160c50b0e932481268c994aa117a271ec70b3.png" />
 </div>
 </div>
 </section>
@@ -761,7 +760,7 @@
     <span class="p">)</span>
 
 <span class="c1"># Set y-axis limit to ensure bars are fully visible</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">125000</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Political Party&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Total Sample Size&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
@@ -778,7 +777,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/cd37d0c6bb0a4cde78e4667c9c0e145971c92a739b98bf12223aa0d8dbb6aa2d.png" src="_images/cd37d0c6bb0a4cde78e4667c9c0e145971c92a739b98bf12223aa0d8dbb6aa2d.png" />
+<img alt="_images/328acaf8c365454f948da087d7acb2983d3bdf8da5b2922326d024d4b8dfe711.png" src="_images/328acaf8c365454f948da087d7acb2983d3bdf8da5b2922326d024d4b8dfe711.png" />
 </div>
 </div>
 </section>
@@ -824,17 +823,6 @@
     <span class="n">third_party_data_2016</span><span class="p">,</span>
     <span class="n">third_party_data_2014</span><span class="p">,</span>
     <span class="p">])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Median Democrat Error Margin: </span><span class="si">{</span><span class="n">median_democrat_error_margin</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Median Republican Error Margin: </span><span class="si">{</span><span class="n">median_republican_error_margin</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Median Third Party Error Margin: </span><span class="si">{</span><span class="n">median_third_party_error_margin</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Median Democrat Error Margin: 0.12%
-Median Republican Error Margin: 0.00%
-Median Third Party Error Margin: -3.03%
 </pre></div>
 </div>
 </div>
@@ -845,7 +833,7 @@ Median Third Party Error Margin: -3.03%
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update Week **MANUALLY**</span>
-<span class="n">week</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">week</span> <span class="o">=</span> <span class="mi">5</span>
 
 <span class="c1"># Dictionary of median error margins</span>
 <span class="n">median_error_margins</span> <span class="o">=</span> <span class="p">{</span>
@@ -888,6 +876,16 @@ Median Third Party Error Margin: -3.03%
         <span class="p">],</span>
     <span class="p">}</span>
 <span class="p">)</span>
+
+<span class="c1"># highlights_dem_georgia_row = [f&#39;Georgia DEM&#39;, f&#39;{dem_percentage_chance:.1f}%&#39;]</span>
+<span class="c1"># highlights_rep_georgia_row = [f&#39;Georgia REP&#39;, f&#39;{rep_percentage_chance:.1f}%&#39;]</span>
+<span class="c1"># highlights_third_party_georgia_row = [f&#39;Georgia 3rd&#39;, f&#39;{third_party_percentage_chance:.1f}%&#39;]</span>
+
+<span class="c1"># with open(&#39;highlights_index.csv&#39;, &#39;a&#39;, newline=&#39;&#39;) as f:</span>
+<span class="c1">#     writer_object = writer(f)</span>
+<span class="c1">#     writer_object.writerow(highlights_dem_georgia_row)</span>
+<span class="c1">#     writer_object.writerow(highlights_rep_georgia_row)</span>
+<span class="c1">#     writer_object.writerow(highlights_third_party_georgia_row)</span>
 
 <span class="c1"># Sort by percentage</span>
 <span class="n">combined_df</span> <span class="o">=</span> <span class="n">combined_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Combined Percentage&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -1034,7 +1032,7 @@ Median Third Party Error Margin: -3.03%
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2b34850d2ce729d3f2f610a82b6ad1afa374bb2dbfb91da33856b4111445c71c.png" src="_images/2b34850d2ce729d3f2f610a82b6ad1afa374bb2dbfb91da33856b4111445c71c.png" />
+<img alt="_images/f63911377ddbec9860c5a65259e979cd888a4d849233ea765e9451d50747d01c.png" src="_images/f63911377ddbec9860c5a65259e979cd888a4d849233ea765e9451d50747d01c.png" />
 </div>
 </div>
 </section>
