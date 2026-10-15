@@ -869,16 +869,6 @@
         <span class="p">],</span>
     <span class="p">}</span>
 <span class="p">)</span>
-
-<span class="c1"># highlights_dem_maine_row = [f&#39;Maine DEM&#39;, f&#39;{dem_percentage_chance:.1f}%&#39;]</span>
-<span class="c1"># highlights_rep_maine_row = [f&#39;Maine REP&#39;, f&#39;{rep_percentage_chance:.1f}%&#39;]</span>
-<span class="c1"># highlights_third_party_maine_row = [f&#39;Maine 3rd&#39;, f&#39;{third_party_percentage_chance:.1f}%&#39;]</span>
-
-<span class="c1"># with open(&#39;highlights_index.csv&#39;, &#39;a&#39;, newline=&#39;&#39;) as f:</span>
-<span class="c1">#     writer_object = writer(f)</span>
-<span class="c1">#     writer_object.writerow(highlights_dem_maine_row)</span>
-<span class="c1">#     writer_object.writerow(highlights_rep_maine_row)</span>
-<span class="c1">#     writer_object.writerow(highlights_third_party_maine_row)</span>
     
 <span class="c1"># Sort by percentage</span>
 <span class="n">combined_df</span> <span class="o">=</span> <span class="n">combined_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Combined Percentage&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
