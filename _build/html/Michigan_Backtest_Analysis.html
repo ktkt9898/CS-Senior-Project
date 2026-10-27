@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -436,7 +436,7 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.patheffects</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pe</span>
 
 <span class="n">data_2024</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;michigan_2024_polling_backtest.csv&quot;</span><span class="p">)</span>
-<span class="n">result_2024</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;michigan_results_index.csv&quot;</span><span class="p">)</span>    
+<span class="n">result_2024</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;michigan_results_index.csv&quot;</span><span class="p">)</span>
 <span class="n">data_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;michigan_2020_polling_backtest.csv&quot;</span><span class="p">)</span>
 <span class="n">result_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;michigan_results_index.csv&quot;</span><span class="p">)</span>
 <span class="n">data_2018</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;michigan_2018_polling_backtest.csv&quot;</span><span class="p">)</span>
@@ -566,9 +566,11 @@
 <span class="c1"># Base x-positions for each year cluster</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n_years</span><span class="p">)</span>
 
+
 <span class="k">def</span><span class="w"> </span><span class="nf">bar_offset</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Center k-th of n bars around x=0.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">bar_width</span>
+
 
 <span class="c1"># Party styles: face color, edge color, hatch pattern</span>
 <span class="n">party_styles</span> <span class="o">=</span> <span class="p">{</span>
@@ -623,20 +625,32 @@
 <span class="c1"># --- Two legends ---</span>
 <span class="c1"># 1. Polling Colors</span>
 <span class="n">party_legend</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="n">party_styles</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="s2">&quot;polling_face&quot;</span><span class="p">],</span> <span class="n">edgecolor</span><span class="o">=</span><span class="n">party_styles</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="s2">&quot;result_face&quot;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">Patch</span><span class="p">(</span>
+        <span class="n">facecolor</span><span class="o">=</span><span class="n">party_styles</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="s2">&quot;polling_face&quot;</span><span class="p">],</span>
+        <span class="n">edgecolor</span><span class="o">=</span><span class="n">party_styles</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="s2">&quot;result_face&quot;</span><span class="p">],</span>
+        <span class="n">label</span><span class="o">=</span><span class="n">p</span><span class="p">,</span>
+    <span class="p">)</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">parties</span>
 <span class="p">]</span>
 
 <span class="c1"># 2. Result Colors</span>
 <span class="n">result_legend</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="n">party_styles</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="s2">&quot;result_face&quot;</span><span class="p">],</span> <span class="n">edgecolor</span><span class="o">=</span><span class="n">party_styles</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="s2">&quot;result_face&quot;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">Patch</span><span class="p">(</span>
+        <span class="n">facecolor</span><span class="o">=</span><span class="n">party_styles</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="s2">&quot;result_face&quot;</span><span class="p">],</span>
+        <span class="n">edgecolor</span><span class="o">=</span><span class="n">party_styles</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="s2">&quot;result_face&quot;</span><span class="p">],</span>
+        <span class="n">label</span><span class="o">=</span><span class="n">p</span><span class="p">,</span>
+    <span class="p">)</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">parties</span>
 <span class="p">]</span>
 <span class="c1"># Add Polling vs Result legends</span>
-<span class="n">leg1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">party_legend</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Polling&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">framealpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+<span class="n">leg1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
+    <span class="n">handles</span><span class="o">=</span><span class="n">party_legend</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Polling&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">framealpha</span><span class="o">=</span><span class="mf">0.9</span>
+<span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">leg1</span><span class="p">)</span>
 <span class="c1"># Add the second legend</span>
-<span class="n">leg2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">result_legend</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Results&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">framealpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+<span class="n">leg2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
+    <span class="n">handles</span><span class="o">=</span><span class="n">result_legend</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Results&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">framealpha</span><span class="o">=</span><span class="mf">0.9</span>
+<span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">leg2</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
