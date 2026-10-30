@@ -682,14 +682,14 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>               Answer Political Party  Sample Size
-0  Collins (Susan M.)             REP      64651.0
-1        Someone else            NONE      31836.0
-2             Platner             DEM      30357.0
-3      Jackson (Troy)             DEM      24916.0
-4               Mills             DEM      21464.0
+0  Collins (Susan M.)             REP      69822.0
+1        Someone else            NONE      35930.0
+2      Jackson (Troy)             DEM      30087.0
+3             Platner             DEM      29857.0
+4               Mills             DEM      20964.0
 </pre></div>
 </div>
-<img alt="_images/8605a637b51b76f80226380084c9053ed8a708310a989887e432d8e315f53df4.png" src="_images/8605a637b51b76f80226380084c9053ed8a708310a989887e432d8e315f53df4.png" />
+<img alt="_images/41f26ae0ff5db0ceebb953dd369631663344ff6614b36b156295483a429e1a20.png" src="_images/41f26ae0ff5db0ceebb953dd369631663344ff6614b36b156295483a429e1a20.png" />
 </div>
 </div>
 </section>
@@ -793,12 +793,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Party    Votes
-0   DEM  76737.0
-1   REP  64651.0
-2  NONE  31836.0
+0   DEM  80908.0
+1   REP  69822.0
+2  NONE  35930.0
 </pre></div>
 </div>
-<img alt="_images/a9f8bb00eac760c724a54325e12389fbc6badd01615b68ec1ac5c9595a97921a.png" src="_images/a9f8bb00eac760c724a54325e12389fbc6badd01615b68ec1ac5c9595a97921a.png" />
+<img alt="_images/0f33103732c99f6f3782ee7af028bbd0f2566cd5b1c2987d5f4aeccdda8a0cb2.png" src="_images/0f33103732c99f6f3782ee7af028bbd0f2566cd5b1c2987d5f4aeccdda8a0cb2.png" />
 </div>
 </div>
 </section>
@@ -860,9 +860,9 @@
 <span class="c1"># STAGE 1 — WEIGHTS (all tunable numbers in one place)</span>
 <span class="c1"># =====================================================================</span>
 
-<span class="n">WEEK</span> <span class="o">=</span> <span class="mi">8</span>                         <span class="c1"># update manually each week</span>
-<span class="n">POLL_WEIGHT</span>       <span class="o">=</span> <span class="mf">0.70</span>         <span class="c1"># weight given to current polling</span>
-<span class="n">HISTORICAL_WEIGHT</span> <span class="o">=</span> <span class="mf">0.30</span>         <span class="c1"># weight given to 2024 actual results</span>
+<span class="n">WEEK</span> <span class="o">=</span> <span class="mi">9</span>                         <span class="c1"># update manually each week</span>
+<span class="n">POLL_WEIGHT</span>       <span class="o">=</span> <span class="mf">0.80</span>         <span class="c1"># weight given to current polling</span>
+<span class="n">HISTORICAL_WEIGHT</span> <span class="o">=</span> <span class="mf">0.20</span>         <span class="c1"># weight given to 2024 actual results</span>
 <span class="k">assert</span> <span class="n">POLL_WEIGHT</span> <span class="o">+</span> <span class="n">HISTORICAL_WEIGHT</span> <span class="o">==</span> <span class="mf">1.0</span>
 
 <span class="c1"># =====================================================================</span>
@@ -1013,10 +1013,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Predicted percentages by party: {&#39;DEM&#39;: np.float64(34.338656738901136), &#39;REP&#39;: np.float64(36.78010517019507), &#39;NONE&#39;: np.float64(28.881238090903796)}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Predicted percentages by party: {&#39;DEM&#39;: np.float64(36.89553196910377), &#39;REP&#39;: np.float64(37.02782855669061), &#39;NONE&#39;: np.float64(26.076639474205642)}
 </pre></div>
 </div>
-<img alt="_images/a1342f78125f2968622fc107989461ff65d2ec4dcb32a01db276630ae369059a.png" src="_images/a1342f78125f2968622fc107989461ff65d2ec4dcb32a01db276630ae369059a.png" />
+<img alt="_images/2cc9fb26724af30451d85c88cbabb71b9878b73e05f8f926efc9fe6edf9ee74a.png" src="_images/2cc9fb26724af30451d85c88cbabb71b9878b73e05f8f926efc9fe6edf9ee74a.png" />
 </div>
 </div>
 </section>
