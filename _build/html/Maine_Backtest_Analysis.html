@@ -63,7 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Maine_Backtest_Analysis';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Maine Backtest Analysis, 2024-2014 Polling Data vs 2024-2014 Election Results" href="Maine_Backtest.html" />
+    <link rel="next" title="Maine Backtest Analysis, 2014-2026 Polling Data vs 2014-2026 Election Results" href="Maine_Backtest.html" />
     <link rel="prev" title="Maine Election Prediction, Week 9" href="Maine_Week_9.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,7 +183,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Georgia_Backtest_Analysis.html">Georgia Backtest Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="Georgia_Backtest.html">Georgia Backtest Analysis, 2022-2014 Polling Data vs 2022-2014 Election Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Georgia_Backtest.html">Georgia Backtest Analysis, 2014-2026 Polling Data vs 2014-2026 Election Results</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Maine_Election_Analysis.html">Maine Election Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -199,7 +199,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Maine Backtest Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="Maine_Backtest.html">Maine Backtest Analysis, 2024-2014 Polling Data vs 2024-2014 Election Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Maine_Backtest.html">Maine Backtest Analysis, 2014-2026 Polling Data vs 2014-2026 Election Results</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Michigan_Election_Analysis.html">Michigan Election Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -215,7 +215,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Michigan_Backtest_Analysis.html">Michigan Backtest Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="Michigan_Backtest.html">Michigan Backtest Analysis, 2024-2014 Polling Data vs 2024-2014 Election Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Michigan_Backtest.html">Michigan Backtest Analysis, 2014-2026 Polling Data vs 2014-2026 Election Results</a></li>
 </ul>
 </details></li>
 </ul>
@@ -411,7 +411,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries-and-data">Import Libraries and Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backtest-data-from-maine-s-2024-2014-polling-data-and-2024-2014-election-end-results">Backtest data from Maine’s 2024-2014 polling data and 2024-2014 election end results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backtest-data-from-maine-s-2014-2026-polling-data-and-2014-2026-election-end-results">Backtest data from Maine’s 2014-2026 polling data and 2014-2026 election end results</a></li>
 </ul>
             </nav>
         </div>
@@ -435,6 +435,8 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.patheffects</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pe</span>
 
+<span class="n">data_2026</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;maine_2026_polling_backtest.csv&quot;</span><span class="p">)</span>
+<span class="n">result_2026</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;maine_results_index.csv&quot;</span><span class="p">)</span>
 <span class="n">data_2024</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;maine_2024_polling_backtest.csv&quot;</span><span class="p">)</span>
 <span class="n">result_2024</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;maine_results_index.csv&quot;</span><span class="p">)</span>
 <span class="n">data_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;maine_2020_polling_backtest.csv&quot;</span><span class="p">)</span>
@@ -448,11 +450,21 @@
 </div>
 </div>
 </section>
-<section id="backtest-data-from-maine-s-2024-2014-polling-data-and-2024-2014-election-end-results">
-<h2>Backtest data from Maine’s 2024-2014 polling data and 2024-2014 election end results<a class="headerlink" href="#backtest-data-from-maine-s-2024-2014-polling-data-and-2024-2014-election-end-results" title="Link to this heading">#</a></h2>
+<section id="backtest-data-from-maine-s-2014-2026-polling-data-and-2014-2026-election-end-results">
+<h2>Backtest data from Maine’s 2014-2026 polling data and 2014-2026 election end results<a class="headerlink" href="#backtest-data-from-maine-s-2014-2026-polling-data-and-2014-2026-election-end-results" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve end result from 2024 polling data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve end result from 2026 polling data</span>
+<span class="n">democrat_data_2026</span> <span class="o">=</span> <span class="n">data_2026</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">republican_data_2026</span> <span class="o">=</span> <span class="n">data_2026</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">third_party_data_2026</span> <span class="o">=</span> <span class="n">data_2026</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+
+<span class="c1"># Retrieve the actual result from the 2026 election</span>
+<span class="n">democrat_result_2026</span> <span class="o">=</span> <span class="n">result_2026</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">republican_result_2026</span> <span class="o">=</span> <span class="n">result_2026</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">third_party_result_2026</span> <span class="o">=</span> <span class="n">result_2026</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># Retrieve end result from 2024 polling data</span>
 <span class="n">democrat_data_2024</span> <span class="o">=</span> <span class="n">data_2024</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">republican_data_2024</span> <span class="o">=</span> <span class="n">data_2024</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">third_party_data_2024</span> <span class="o">=</span> <span class="n">data_2024</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
@@ -492,16 +504,28 @@
 <span class="n">republican_result_2014</span> <span class="o">=</span> <span class="n">result_2014</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">third_party_result_2014</span> <span class="o">=</span> <span class="n">result_2014</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 
+<span class="n">polling_percentages_2026</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">democrat_data_2026</span><span class="p">),</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">republican_data_2026</span><span class="p">),</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">third_party_data_2026</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">result_percentages_2026</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">democrat_result_2026</span><span class="p">),</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">republican_result_2026</span><span class="p">),</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">third_party_result_2026</span><span class="p">),</span>
+<span class="p">]</span>
+
 <span class="n">polling_percentages_2024</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="nb">float</span><span class="p">(</span><span class="n">democrat_data_2014</span><span class="p">),</span>
-    <span class="nb">float</span><span class="p">(</span><span class="n">republican_data_2014</span><span class="p">),</span>
-    <span class="nb">float</span><span class="p">(</span><span class="n">third_party_data_2014</span><span class="p">),</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">democrat_data_2024</span><span class="p">),</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">republican_data_2024</span><span class="p">),</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">third_party_data_2024</span><span class="p">),</span>
 <span class="p">]</span>
 
 <span class="n">result_percentages_2024</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="nb">float</span><span class="p">(</span><span class="n">democrat_result_2014</span><span class="p">),</span>
-    <span class="nb">float</span><span class="p">(</span><span class="n">republican_result_2014</span><span class="p">),</span>
-    <span class="nb">float</span><span class="p">(</span><span class="n">third_party_result_2014</span><span class="p">),</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">democrat_result_2024</span><span class="p">),</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">republican_result_2024</span><span class="p">),</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">third_party_result_2024</span><span class="p">),</span>
 <span class="p">]</span>
 
 <span class="n">polling_percentages_2020</span> <span class="o">=</span> <span class="p">[</span>
@@ -541,13 +565,14 @@
 <span class="p">]</span>
 
 <span class="n">data_bar_chart</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2024</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2024</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2020</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2020</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2018</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2018</span><span class="p">},</span>
     <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2014</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2014</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2018</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2018</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2020</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2020</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2024</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2024</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2026</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2026</span><span class="p">},</span>
 <span class="p">]</span>
 
-<span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;2024&quot;</span><span class="p">,</span> <span class="s2">&quot;2020&quot;</span><span class="p">,</span> <span class="s2">&quot;2018&quot;</span><span class="p">,</span> <span class="s2">&quot;2014&quot;</span><span class="p">]</span>
+<span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;2014&quot;</span><span class="p">,</span> <span class="s2">&quot;2018&quot;</span><span class="p">,</span> <span class="s2">&quot;2020&quot;</span><span class="p">,</span> <span class="s2">&quot;2024&quot;</span><span class="p">,</span> <span class="s2">&quot;2026&quot;</span><span class="p">]</span>
 <span class="n">parties</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;DEM&quot;</span><span class="p">,</span> <span class="s2">&quot;REP&quot;</span><span class="p">,</span> <span class="s2">&quot;THIRD&quot;</span><span class="p">]</span>
 <span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;polling&quot;</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">]</span>
 
@@ -617,7 +642,7 @@
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">years</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Election Year&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Percentage of Votes (%)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Polling vs. Results by Year and Party&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Maine Polling vs. Results by Year and Party&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 
 <span class="c1"># --- Two legends ---</span>
@@ -646,7 +671,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/8044a9f64ae0bb7a2c5c967348141129f9e6365d6302bd7a6f2e9fb3e98a7907.png" src="_images/8044a9f64ae0bb7a2c5c967348141129f9e6365d6302bd7a6f2e9fb3e98a7907.png" />
+<img alt="_images/ebf88148db97756981ef6ef13108110ad6ae50b8958020a404b677657be5064b.png" src="_images/ebf88148db97756981ef6ef13108110ad6ae50b8958020a404b677657be5064b.png" />
 </div>
 </div>
 </section>
@@ -698,7 +723,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Maine Backtest Analysis, 2024-2014 Polling Data vs 2024-2014 Election Results</p>
+        <p class="prev-next-title">Maine Backtest Analysis, 2014-2026 Polling Data vs 2014-2026 Election Results</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -721,7 +746,7 @@
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries-and-data">Import Libraries and Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backtest-data-from-maine-s-2024-2014-polling-data-and-2024-2014-election-end-results">Backtest data from Maine’s 2024-2014 polling data and 2024-2014 election end results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backtest-data-from-maine-s-2014-2026-polling-data-and-2014-2026-election-end-results">Backtest data from Maine’s 2014-2026 polling data and 2014-2026 election end results</a></li>
 </ul>
   </nav></div>
 

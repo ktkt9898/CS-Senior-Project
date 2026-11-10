@@ -63,7 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Georgia_Backtest_Analysis';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Georgia Backtest Analysis, 2022-2014 Polling Data vs 2022-2014 Election Results" href="Georgia_Backtest.html" />
+    <link rel="next" title="Georgia Backtest Analysis, 2014-2026 Polling Data vs 2014-2026 Election Results" href="Georgia_Backtest.html" />
     <link rel="prev" title="Georgia Election Prediction, Week 9" href="Georgia_Week_9.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,7 +183,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Georgia Backtest Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="Georgia_Backtest.html">Georgia Backtest Analysis, 2022-2014 Polling Data vs 2022-2014 Election Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Georgia_Backtest.html">Georgia Backtest Analysis, 2014-2026 Polling Data vs 2014-2026 Election Results</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Maine_Election_Analysis.html">Maine Election Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -199,7 +199,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Maine_Backtest_Analysis.html">Maine Backtest Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="Maine_Backtest.html">Maine Backtest Analysis, 2024-2014 Polling Data vs 2024-2014 Election Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Maine_Backtest.html">Maine Backtest Analysis, 2014-2026 Polling Data vs 2014-2026 Election Results</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Michigan_Election_Analysis.html">Michigan Election Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -215,7 +215,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Michigan_Backtest_Analysis.html">Michigan Backtest Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="Michigan_Backtest.html">Michigan Backtest Analysis, 2024-2014 Polling Data vs 2024-2014 Election Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Michigan_Backtest.html">Michigan Backtest Analysis, 2014-2026 Polling Data vs 2014-2026 Election Results</a></li>
 </ul>
 </details></li>
 </ul>
@@ -411,7 +411,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries-and-data">Import Libraries and Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backtest-data-from-georgia-s-2022-2014-polling-data-and-2022-2014-election-result">Backtest data from Georgia’s 2022-2014 polling data and 2022-2014 election result</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backtest-data-from-georgia-s-2014-2026-polling-data-and-2014-2026-election-result">Backtest data from Georgia’s 2014-2026 polling data and 2014-2026 election result</a></li>
 </ul>
             </nav>
         </div>
@@ -435,6 +435,8 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.patheffects</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pe</span>
 
+<span class="n">data_2026</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_2026_polling_backtest.csv&quot;</span><span class="p">)</span>
+<span class="n">result_2026</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_results_index.csv&quot;</span><span class="p">)</span>
 <span class="n">data_2022</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_2022_polling_backtest.csv&quot;</span><span class="p">)</span>
 <span class="n">result_2022</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_results_index.csv&quot;</span><span class="p">)</span>
 <span class="n">data_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;georgia_2020_polling_backtest.csv&quot;</span><span class="p">)</span>
@@ -448,11 +450,21 @@
 </div>
 </div>
 </section>
-<section id="backtest-data-from-georgia-s-2022-2014-polling-data-and-2022-2014-election-result">
-<h2>Backtest data from Georgia’s 2022-2014 polling data and 2022-2014 election result<a class="headerlink" href="#backtest-data-from-georgia-s-2022-2014-polling-data-and-2022-2014-election-result" title="Link to this heading">#</a></h2>
+<section id="backtest-data-from-georgia-s-2014-2026-polling-data-and-2014-2026-election-result">
+<h2>Backtest data from Georgia’s 2014-2026 polling data and 2014-2026 election result<a class="headerlink" href="#backtest-data-from-georgia-s-2014-2026-polling-data-and-2014-2026-election-result" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve end result from 2022 polling data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve end result from 2026 polling data</span>
+<span class="n">democrat_data_2026</span> <span class="o">=</span> <span class="n">data_2026</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">republican_data_2026</span> <span class="o">=</span> <span class="n">data_2026</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">third_party_data_2026</span> <span class="o">=</span> <span class="n">data_2026</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+
+<span class="c1"># Retrieve the actual result from the 2026 election</span>
+<span class="n">democrat_result_2026</span> <span class="o">=</span> <span class="n">result_2026</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">republican_result_2026</span> <span class="o">=</span> <span class="n">result_2026</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">third_party_result_2026</span> <span class="o">=</span> <span class="n">result_2026</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Retrieve end result from 2022 polling data</span>
 <span class="n">democrat_data_2022</span> <span class="o">=</span> <span class="n">data_2022</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 <span class="n">republican_data_2022</span> <span class="o">=</span> <span class="n">data_2022</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 <span class="n">third_party_data_2022</span> <span class="o">=</span> <span class="n">data_2022</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
@@ -491,6 +503,18 @@
 <span class="n">democrat_result_2014</span> <span class="o">=</span> <span class="n">result_2014</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">republican_result_2014</span> <span class="o">=</span> <span class="n">result_2014</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">third_party_result_2014</span> <span class="o">=</span> <span class="n">result_2014</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="n">polling_percentages_2026</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">democrat_data_2026</span><span class="p">),</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">republican_data_2026</span><span class="p">),</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">third_party_data_2026</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">result_percentages_2026</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">democrat_result_2026</span><span class="p">),</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">republican_result_2026</span><span class="p">),</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">third_party_result_2026</span><span class="p">),</span>
+<span class="p">]</span>
 
 <span class="n">polling_percentages_2022</span> <span class="o">=</span> <span class="p">[</span>
     <span class="nb">float</span><span class="p">(</span><span class="n">democrat_data_2022</span><span class="p">),</span>
@@ -541,13 +565,14 @@
 <span class="p">]</span>
 
 <span class="n">data_bar_chart</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2022</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2022</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2020</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2020</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2016</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2016</span><span class="p">},</span>
     <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2014</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2014</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2016</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2016</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2020</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2020</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2022</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2022</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;polling&quot;</span><span class="p">:</span> <span class="n">polling_percentages_2026</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result_percentages_2026</span><span class="p">},</span>
 <span class="p">]</span>
 
-<span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;2022&quot;</span><span class="p">,</span> <span class="s2">&quot;2020&quot;</span><span class="p">,</span> <span class="s2">&quot;2016&quot;</span><span class="p">,</span> <span class="s2">&quot;2014&quot;</span><span class="p">]</span>
+<span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;2014&quot;</span><span class="p">,</span> <span class="s2">&quot;2016&quot;</span><span class="p">,</span> <span class="s2">&quot;2020&quot;</span><span class="p">,</span> <span class="s2">&quot;2022&quot;</span><span class="p">,</span> <span class="s2">&quot;2026&quot;</span><span class="p">]</span>
 <span class="n">parties</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;DEM&quot;</span><span class="p">,</span> <span class="s2">&quot;REP&quot;</span><span class="p">,</span> <span class="s2">&quot;THIRD&quot;</span><span class="p">]</span>
 <span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;polling&quot;</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">]</span>
 
@@ -617,7 +642,7 @@
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">years</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Election Year&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Percentage of Votes (%)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Polling vs. Results by Year and Party&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Georgia Polling vs. Results by Year and Party&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 
 <span class="c1"># --- Two legends ---</span>
@@ -646,7 +671,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/95eb22b2146d0f2bbe831d3f56e60fcff008e8454fd49050c592f6ae3fa7e48f.png" src="_images/95eb22b2146d0f2bbe831d3f56e60fcff008e8454fd49050c592f6ae3fa7e48f.png" />
+<img alt="_images/944bb1cb6ae1836d56800b0bb2cfcfa9fbd96c3c91b0166fe1c7dc7c127c2f0a.png" src="_images/944bb1cb6ae1836d56800b0bb2cfcfa9fbd96c3c91b0166fe1c7dc7c127c2f0a.png" />
 </div>
 </div>
 </section>
@@ -698,7 +723,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Georgia Backtest Analysis, 2022-2014 Polling Data vs 2022-2014 Election Results</p>
+        <p class="prev-next-title">Georgia Backtest Analysis, 2014-2026 Polling Data vs 2014-2026 Election Results</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -721,7 +746,7 @@
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries-and-data">Import Libraries and Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backtest-data-from-georgia-s-2022-2014-polling-data-and-2022-2014-election-result">Backtest data from Georgia’s 2022-2014 polling data and 2022-2014 election result</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backtest-data-from-georgia-s-2014-2026-polling-data-and-2014-2026-election-result">Backtest data from Georgia’s 2014-2026 polling data and 2014-2026 election result</a></li>
 </ul>
   </nav></div>
 
