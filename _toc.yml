@@ -17,9 +17,9 @@ chapters:
   - file: Georgia_Week_7
   - file: Georgia_Week_8
   - file: Georgia_Week_9
-- file: Georgia_Backtest_Analysis
+- file: Georgia_Uncerntainty_Analysis
   sections:
-  - file: Georgia_Backtest
+  - file: Georgia_Uncerntainty
 - file: Maine_Election_Analysis
   sections:
   - file: Maine_Week_1
@@ -31,9 +31,9 @@ chapters:
   - file: Maine_Week_7
   - file: Maine_Week_8
   - file: Maine_Week_9
-- file: Maine_Backtest_Analysis
+- file: Maine_Uncerntainty_Analysis
   sections:
-  - file: Maine_Backtest
+  - file: Maine_Uncerntainty
 - file: Michigan_Election_Analysis
   sections:
   - file: Michigan_Week_1
@@ -45,6 +45,6 @@ chapters:
   - file: Michigan_Week_7
   - file: Michigan_Week_8
   - file: Michigan_Week_9
-- file: Michigan_Backtest_Analysis
+- file: Michigan_Uncerntainty_Analysis
   sections:
-  - file: Michigan_Backtest
+  - file: Michigan_Uncerntainty
